@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи»
 
 * Студент: [Екатерина Зеленцова](https://up.htmlacademy.ru/adaptive/27/user/2114545).
-* Наставник: [Сергей Артёмов] (https://htmlacademy.ru/profile/firefoxic)
+* Наставник: [Сергей Артёмов](https://htmlacademy.ru/profile/firefoxic)
 
 ---
 
