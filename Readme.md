@@ -1,58 +1,90 @@
 # Личный проект «Кэт энерджи»
 
+[![Project check][check-image]][check-url]
+
 * Студент: [Екатерина Зеленцова](https://up.htmlacademy.ru/adaptive/27/user/2114545).
+<<<<<<< HEAD
 * Наставник: [Сергей Артёмов](https://htmlacademy.ru/profile/firefoxic)
+=======
+* Наставник: [Сергей Артёмов](https://htmlacademy.ru/profile/firefoxic).
+>>>>>>> 4dcc15a98c9bf7ca271c297cc6dc2aa9235aa312
 
 ---
 
-**Обратите внимание, что папка с вашими исходными файлами для работы над проектом — `source/`.**
+В корне проекта находятся только его конфиги. А также [Contributing.md](Contributing.md) — полезное руководство по внесению изменений.
 
-Полезный файл:
+**Исходные файлы вёрстки должны лежать в `source/`.**
 
-- [Contributing.md](Contributing.md) — руководство по внесению изменений.
-
-_Не удаляйте и не обращайте внимание на файлы и папки:_<br>
-_`.github`, `.editorconfig`, `.gitattributes`, `.gitignore`, `.stylelintrc`, `package.json`, `package-lock.json`._
+Собирается проект в `build/`.
 
 ---
 
-### Памятка
+## Установка зависимостей проекта
 
-#### 1. Зарегистрируйтесь на Гитхабе
+Сложная сборка в этом проекте не заведётся без дополнительных инструментов — зависимостей. Поэтому их необходимо установить.
 
-Если у вас ещё нет аккаунта на [github.com](https://github.com/join), скорее зарегистрируйтесь.
+### 1. Терминал
 
-#### 2. Создайте форк
+Для установки зависимостей понадобится терминал. В Linux и macOS он уже есть, а в Windows лучше установить _git-bash_, который идёт в комплекте с самим [Git](https://git-scm.com/download/windows).
 
-[Откройте мастер-репозиторий](https://github.com/htmlacademy-adaptive/2114545-cat-energy-27) и нажмите кнопку «Fork» в правом верхнем углу. Репозиторий из Академии будет скопирован в ваш аккаунт.
+### 2. Node.js
 
-<img width="800" alt="" src="https://user-images.githubusercontent.com/10909/60808133-3a7ace00-a190-11e9-9d29-401b02036a9c.jpg">
+Зависимости работают в среде _node.js_, которую тоже нужно установить, но лучше не с помощью установщика с официального сайта, а через менеджер версий ноды — _nvm_: для [Linux и macOS](https://github.com/nvm-sh/nvm#install--update-script) и для [Windows](https://github.com/coreybutler/nvm-windows/releases).
 
-Получится вот так:
+После установки _nvm_ выполняем установку требуемой в проекте версии ноды:
 
-<img width="800" alt="" src="https://user-images.githubusercontent.com/10909/60808135-3a7ace00-a190-11e9-9a8d-7390b3784c65.jpg">
-
-#### 3. Клонируйте репозиторий на свой компьютер
-
-Будьте внимательны: нужно клонировать свой репозиторий (форк), а не репозиторий Академии. Также обратите внимание, что клонировать репозиторий нужно через SSH, а не через HTTPS. Нажмите зелёную кнопку «Code» в правой части экрана, чтобы скопировать SSH-адрес вашего репозитория:
-
-<img width="800" alt="" src="https://user-images.githubusercontent.com/10909/60808136-3a7ace00-a190-11e9-884f-24621e62b29a.jpg">
-
-Клонировать репозиторий можно так:
-
-```
-git clone SSH-адрес_вашего_форка
+```shell
+nvm install 16.18.1
 ```
 
-Команда клонирует репозиторий на ваш компьютер и подготовит всё необходимое для старта работы.
+* В Linux после этого достаточно перезапустить терминал.
 
-#### 4. Начинайте обучение!
+* В macOS перед перезапуском терминала возможно придётся в файл `~/.zshrc` добавить такие строчки, если они в нём не появились или если файл не существует:
+
+	```bash
+	export NVM_DIR="$HOME/.nvm"
+	[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+	```
+
+* В Windows нужно закрыть терминал опять его запустить, но уже от имени администратора (даже если пользователь администратор), и выполнить:
+
+	```shell
+	nvm use 16.18.1
+	```
+
+	Затем закрыть небезопасный терминал.
+
+Снова открываем терминал и проверяем установившуюся версию:
+
+```shell
+node -v
+```
+
+Если всё хорошо команда выведет `16.18.1`.
+
+### 3. Зависимости
+
+Вместе с нодой нам стал доступен её менеджер пакетов — _npm_ (не путать с _nvm_!). Он нам нужен в первую очередь для установки зависимости проекта (но не только).
+
+Для этого в терминале, находясь в директории проекта, выполняем (не обращая внимание на предупреждения во время установки):
+
+```shell
+npm ci
+```
+
+После установки зависимостей можно запускать сборку для разработки:
+
+```shell
+npm start
+```
+
+При этом запустится и локальный сервер в папке `build/`, в которую собирается проект из папки `source/`, а в брауезере откроется разрабатываемый сайт и будет обновляться при обновлении файлов в проекте.
 
 ---
 
-<a href="https://htmlacademy.ru/intensive/adaptive"><img align="left" width="50" height="50" alt="HTML Academy" src="https://up.htmlacademy.ru/static/img/intensive/adaptive/logo-for-github-2.png"></a>
+<a href="https://htmlacademy.ru/intensive/adaptive"><img align="left" width="60" height="60" alt="HTML Academy" src="https://raw.githubusercontent.com/htmlacademy-adaptive/2114545-cat-energy-27/master/source/icons/htmlacademy.svg"></a>
 
-Репозиторий создан для обучения на профессиональном онлайн‑курсе «[HTML и CSS. Адаптивная вёрстка и автоматизация](https://htmlacademy.ru/intensive/adaptive)» от [HTML Academy](https://htmlacademy.ru).
+Репозиторий создан для обучения на профессиональном онлайн‑курсе «[HTML и CSS. Адаптивная вёрстка и автоматизация](https://htmlacademy.ru/intensive/adaptive)» от [HTML Academy](https://htmlacademy.ru).
 
 [check-image]: https://github.com/htmlacademy-adaptive/2114545-cat-energy-27/workflows/Project%20check/badge.svg?branch=master
 [check-url]: https://github.com/htmlacademy-adaptive/2114545-cat-energy-27/actions

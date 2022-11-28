@@ -1,0 +1,28 @@
+.page {
+	height: 100%;
+	font-family: var(--main-font);
+	font-size: 14px;
+	line-height: 18px;
+	color: var(--main-color);
+}
+
+.page__body {
+	margin: 0;
+	min-height: 100%;
+	background: hsl(0 0% 96%) var(--bg-image) no-repeat center / contain;
+
+	@include bg-image(test);
+}
+
+.page__centerer {
+	margin: 0 20px;
+
+	@media #{$not-mobile} {
+		margin: 0 30px;
+	}
+
+	@media #{$desktop-only} {
+		width: 1220px;
+		margin: 0 auto;
+	}
+}

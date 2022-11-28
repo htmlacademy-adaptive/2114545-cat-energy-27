@@ -1,0 +1,213 @@
+{% set pageId = 1 %}
+{% set permalink = pages[pageId].path %}
+{% extends "./templates/_layout.twig" %}
+
+{% block main %}
+<main>
+	<section class="product-card">
+		<h2 class="product-card__title">Каталог продукции</h2>
+		<ul class="product-card__list">
+			<li class="product-card__item">
+				<a class="product-card__link" href="javascript:void(0)">
+					<h3 class="product-card__name">Cat Energy PRO 500 г</h3>
+					<img class="product-card__image" src="#" width="68" height="86" alt="коробочка 500 грамм со вкусом курицы">
+				</a>
+				<div class="product-card__characteristics characteristics">
+					<dl class="characteristics__list">
+						<dt class="characteristics__name">Масса</dt>
+						<dd class="characteristics__value">500 г</dd>
+						<dt class="characteristics__name">Вкус</dt>
+						<dd class="characteristics__value">Курица</dd>
+						<dt class="characteristics__name">Цена</dt>
+						<dd class="characteristics__value">700 ₽</dd>
+					</dl>
+				</div>
+				<a class="product-card__button" href="javascript:void(0)">Заказать</a>
+			</li>
+
+			<li class="product-card__item">
+				<a class="product-card__link" href="javascript:void(0)">
+					<h3 class="product-card__name">Cat Energy PRO 1000 г</h3>
+					<img class="product-card__image" src="#" width="84" height="100" alt="коробочка 1000 грамм со вкусом курицы">
+				</a>
+				<div class="product-card__characteristics characteristics">
+					<dl class="characteristics__list">
+						<dt class="characteristics__name">Масса</dt>
+						<dd class="characteristics__value">1000 г</dd>
+						<dt class="characteristics__name">Вкус</dt>
+						<dd class="characteristics__value">Курица</dd>
+						<dt class="characteristics__name">Цена</dt>
+						<dd class="characteristics__value">1000 ₽</dd>
+					</dl>
+				</div>
+				<a class="product-card__button" href="javascript:void(0)">Заказать</a>
+			</li>
+
+			<li class="product-card__item">
+				<a class="product-card__link" href="javascript:void(0)">
+					<h3 class="product-card__name">Cat Energy PRO 500 г</h3>
+					<img class="product-card__image" src="#" width="68" height="78" alt="коробочка 500 грамм со вкусом рыбы">
+				</a>
+				<div class="product-card__characteristics characteristics">
+					<dl class="characteristics__list">
+						<dt class="characteristics__name">Масса</dt>
+						<dd class="characteristics__value">500 г</dd>
+						<dt class="characteristics__name">Вкус</dt>
+						<dd class="characteristics__value">Рыба</dd>
+						<dt class="characteristics__name">Цена</dt>
+						<dd class="characteristics__value">700 ₽</dd>
+					</dl>
+				</div>
+				<a class="product-card__button" href="javascript:void(0)">Заказать</a>
+			</li>
+
+			<li class="product-card__item">
+				<a class="product-card__link" href="javascript:void(0)">
+					<h3 class="product-card__name">Cat Energy PRO 1000 г</h3>
+					<img class="product-card__image" src="#" width="84" height="100" alt="коробочка 1000 грамм со вкусом рыбы">
+				</a>
+				<div class="product-card__characteristics characteristics">
+					<dl class="characteristics__list">
+						<dt class="characteristics__name">Масса</dt>
+						<dd class="characteristics__value">1000 г</dd>
+						<dt class="characteristics__name">Вкус</dt>
+						<dd class="characteristics__value">Рыба</dd>
+						<dt class="characteristics__name">Цена</dt>
+						<dd class="characteristics__value">1000 ₽</dd>
+					</dl>
+				</div>
+				<a class="product-card__button" href="javascript:void(0)">Заказать</a>
+			</li>
+
+			<li class="product-card__item">
+				<a class="product-card__link" href="javascript:void(0)">
+					<h3 class="product-card__name">Cat Energy slim 500 г</h3>
+					<img class="product-card__image" src="#" width="68" height="78" alt="коробочка 500 грамм со вкусом гречки">
+				</a>
+				<div class="product-card__characteristics characteristics">
+					<dl class="characteristics__list">
+						<dt class="characteristics__name">Масса</dt>
+						<dd class="characteristics__value">500 г</dd>
+						<dt class="characteristics__name">Вкус</dt>
+						<dd class="characteristics__value">Гречка</dd>
+						<dt class="characteristics__name">Цена</dt>
+						<dd class="characteristics__value">400 ₽</dd>
+					</dl>
+				</div>
+				<a class="product-card__button" href="javascript:void(0)">Заказать</a>
+			</li>
+
+			<li class="product-card__item">
+				<a class="product-card__link" href="javascript:void(0)">
+					<h3 class="product-card__name">Cat Energy slim 1000 г</h3>
+					<img class="product-card__image" src="#" width="84" height="100" alt="коробочка 1000 грамм со вкусом гречки">
+				</a>
+				<div class="product-card__characteristics characteristics">
+					<dl class="characteristics__list">
+						<dt class="characteristics__name">Масса</dt>
+						<dd class="characteristics__value">1000 г</dd>
+						<dt class="characteristics__name">Вкус</dt>
+						<dd class="characteristics__value">Гречка</dd>
+						<dt class="characteristics__name">Цена</dt>
+						<dd class="characteristics__value">700 ₽</dd>
+					</dl>
+				</div>
+				<a class="product-card__button" href="javascript:void(0)">Заказать</a>
+			</li>
+
+			<li class="product-card__item">
+				<a class="product-card__link" href="javascript:void(0)">
+					<h3 class="product-card__name">Cat Energy slim 500 г</h3>
+					<img class="product-card__image" src="#" width="72" height="84" alt="коробочка 500 грамм со вкусом риса">
+				</a>
+				<div class="product-card__characteristics characteristics">
+					<dl class="characteristics__list">
+						<dt class="characteristics__name">Масса</dt>
+						<dd class="characteristics__value">500 г</dd>
+						<dt class="characteristics__name">Вкус</dt>
+						<dd class="characteristics__value">Рис</dd>
+						<dt class="characteristics__name">Цена</dt>
+						<dd class="characteristics__value">500 ₽</dd>
+					</dl>
+				</div>
+				<a class="product-card__button" href="javascript:void(0)">Заказать</a>
+			</li>
+		</ul>
+	</section>
+
+	<section class="more-products">
+		<h3 class="visually-hidden">Посмотреть все товары</h3>
+		<p class="more-products__show-text">Показать еще 100500 товаров</p>
+		<p class="more-products__text">На самом деле вкусов гораздо больше!</p>
+		<a class="more-products__button" href="javascript:void(0)">Показать все</a>
+	</section>
+
+	<section class="additional-card">
+		<h2 class="additional-card__title">Дополнительные товары</h2>
+		<ul class="additional-card__list">
+			<li class="additional-card__item">
+				<a class="additional-card__link" href="javascript:void(0)">
+					<h3 class="additional-card__name">Сахарозаменитель</h3>
+				</a>
+				<div class="additional-card__characteristics characteristics">
+					<dl class="characteristics__list">
+						<dt class="characteristics__quantity">1 упаковка (100 г)</dt>
+						<dd class="characteristics__price">200 ₽</dd>
+					</dl>
+				</div>
+				<a class="additional-card__button" href="javascript:void(0)">Заказать</a>
+			</li>
+
+			<li class="additional-card__item">
+				<a class="additional-card__link" href="javascript:void(0)">
+					<h3 class="additional-card__name">Питьевая вода</h3>
+				</a>
+				<div class="additional-card__characteristics characteristics">
+					<dl class="characteristics__list">
+						<dt class="characteristics__quantity">5 литров</dt>
+						<dd class="characteristics__price">50 ₽</dd>
+					</dl>
+				</div>
+				<a class="additional-card__button" href="javascript:void(0)">Заказать</a>
+			</li>
+			<li class="additional-card__item">
+				<a class="additional-card__link" href="javascript:void(0)">
+					<h3 class="additional-card__name">Молоко</h3>
+				</a>
+				<div class="additional-card__characteristics characteristics">
+					<dl class="characteristics__list">
+						<dt class="characteristics__quantity">1 литр</dt>
+						<dd class="characteristics__price">100 ₽</dd>
+					</dl>
+				</div>
+				<a class="additional-card__button" href="javascript:void(0)">Заказать</a>
+			</li>
+			<li class="additional-card__item">
+				<a class="additional-card__link" href="javascript:void(0)">
+					<h3 class="additional-card__name">Витамины</h3>
+				</a>
+				<div class="additional-card__characteristics characteristics">
+					<dl class="characteristics__list">
+						<dt class="characteristics__quantity">1 упаковка (30 г)</dt>
+						<dd class="characteristics__price">300 ₽</dd>
+					</dl>
+				</div>
+				<a class="additional-card__button" href="javascript:void(0)">Заказать</a>
+			</li>
+		</ul>
+
+		<section class="gifts">
+			<h3 class="visually-hidden">Подарок при заказе</h3>
+			<p class="gifts-text">Закажите все и получите чехол для кота в подарок!</p>
+		</section>
+
+		<section class="address">
+			<h2 class="visually hidden">Адрес компании</h2>
+			<b class="address__cooperation">Приглашаем к сотрудничеству дилеров!</b>
+			<p class="address__text">ул. Большая
+				Конюшенная, д. 19/8
+				Санкт-Петербург</p>
+			<img class="address__image-map" src="img/map.png" width="320" height="362" alt="Местонахождение организации на карте.">
+		</section>
+</main>
+{% endblock %}
