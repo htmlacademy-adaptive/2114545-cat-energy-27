@@ -11,69 +11,75 @@
 
 			<fieldset class="form__group-information information">
 				<legend class="visually-hidden">Данные кота</legend>
-				<label class="information__label" for="name">Имя:*</label>
+				<label class="information__label" for="name">Имя:<span aria-hidden="true">*</span></label>
 				<input class="information__input" type="text" id="name" placeholder="Укажите кличку" value="Барсик" name="cat-name" required>
-				<label class="information__label" for="weight">Вес (кг):*</label>
+				<label class="information__label" for="weight">Вес (кг):<span aria-hidden="true">*</span></label>
 				<input class="information__input" type="text" id="weight" placeholder="Укажите вес" value="7" name="cat-weight" required>
 				<label class="information__label" for="age">Возраст (лет):</label>
 				<input class="information__input" type="text" id="age" placeholder="Укажите возраст" value="7" name="cat-age">
 
 				<label class="information__program-label">
-					<input class="information__program-input" type="checkbox" name="type-of-program" value="" checked>
+					<input class="information__program-input" type="checkbox" name="type-of-program" value="slim" checked>
 					Похудение
 				</label>
 				<label class="information__program-label">
-					<input class="information__program-input" type="checkbox" name="type-of-program" value="">
+					<input class="information__program-input" type="checkbox" name="type-of-program" value="pro">
 					Набор массы
 				</label>
 				<label class="information__program-label">
-					<input class="information__program-input" type="checkbox" name="type-of-program" value="">
+					<input class="information__program-input" type="checkbox" name="type-of-program" value="advice">
 					Не знаю (Нужен ваш совет)
 				</label>
 			</fieldset>
 
 			<fieldset class="form__group-contacts contacts">
 				<legend class="contacts__title">Контактные данные (владельца кота)</legend>
-				<label class="contacts__label" for="email">E-mail:*</label>
+				<label class="contacts__label" for="email">E-mail:<span aria-hidden="true">*</span></label>
 				<input class="contacts__input" placeholder="kuklachev@gmail.com" type="email" id="email" name="email" required>
-				<label class="contacts__label" for="phone">Телефон:*</label>
+				<label class="contacts__label" for="phone">Телефон:<span aria-hidden="true">*</span></label>
 				<input class="contacts__input" placeholder="8 (960) 900-60-90" type="tel" id="phone" name="phone" required>
 			</fieldset>
 
-			<fieldset class="form__group-comments comments">
-				<legend class="comments__title">Комментарий</legend>
-				<input class="comments__input" placeholder="Расскажите обо всех повадках кота" type="text" name="comments">
-			</fieldset>
+			<div class="questionary__comments comments">
+				<label class="comments__label" for="comments">Комментарий</label>
+				<textarea class="comments__text" id="comments" placeholder="Расскажите обо всех повадках кота" name="comments"></textarea>
+			</div>
 
 			<fieldset class="form__group-additional-goods additional-goods">
 				<legend class="additional-goods__title">Дополнительно</legend>
 				<label class="additional-goods__label">
-					<input class="additional-goods__input" type="checkbox" name="type-of-additional-goods" value="" checked>
+					<input class="additional-goods__input" type="checkbox" name="type-of-additional-goods" value="sweetener" checked>
 					Сахарозаменитель
 				</label>
 				<label class="additional-goods__label">
-					<input class="additional-goods__input" type="checkbox" name="type-of-additional-goods" value="">
+					<input class="additional-goods__input" type="checkbox" name="type-of-additional-goods" value="water">
 					Питьевая вода
 				</label>
 				<label class="additional-goods__label">
-					<input class="additional-goods__input" type="checkbox" name="type-of-additional-goods" value="">
+					<input class="additional-goods__input" type="checkbox" name="type-of-additional-goods" value="milk">
 					Молоко
 				</label>
 				<label class="additional-goods__label">
-					<input class="additional-goods__input" type="checkbox" name="type-of-additional-goods" value="">
+					<input class="additional-goods__input" type="checkbox" name="type-of-additional-goods" value="vitamins">
 					Витамины
 				</label>
 			</fieldset>
 			<button class="button subscription-button-sign-up" type="submit">Отправить заявку</button>
+			<span aria-hidden="true">* — Обязательные поля</span>
 		</form>
+	</section>
 
-		<section class="address">
-			<h2 class="visually hidden">Адрес компании</h2>
-			<b class="address__cooperation">Приглашаем к сотрудничеству дилеров!</b>
-			<p class="address__text">ул. Большая
-				Конюшенная, д. 19/8
-				Санкт-Петербург</p>
-			<img class="address__image-map" src="img/map.png" width="320" height="362" alt="Местонахождение организации на карте.">
-		</section>
+	<section class="address">
+		<h2 class="visually hidden">Адрес компании</h2>
+		<b class="address__cooperation">Приглашаем к сотрудничеству дилеров!</b>
+		<p class="address__text">ул. Большая <br>
+			Конюшенная, д. 19/8 <br>
+			Санкт-Петербург</p>
+		<div>
+			<noscript>
+				<img class="address__image-map" src="img/map.png" width="320" height="362" alt="Местонахождение организации на карте.">
+			</noscript>
+		</div>
+	</section>
 </main>
 {% endblock %}
