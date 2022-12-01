@@ -7,11 +7,11 @@
 		},
 		{
 			"path": "catalog.html",
-			"name": "Каталог"
+			"name": "Каталог продукции"
 		},
 		{
 			"path": "form.html",
-			"name": "Форма"
+			"name": "Подбор программы"
 		}
 	],
 	"viewports": {
@@ -25,14 +25,22 @@
 			"width": 320,
 			"height": 454,
 			"maxdppx": 2,
-			"viewports": ["desktop", "tablet", "mobile"]
+			"viewports": [
+				"desktop",
+				"tablet",
+				"mobile"
+			]
 		},
 		"test": {
 			"ext": "png",
 			"width": 320,
 			"height": 320,
 			"maxdppx": 2,
-			"viewports": ["desktop", "tablet", "mobile"]
+			"viewports": [
+				"desktop",
+				"tablet",
+				"mobile"
+			]
 		}
 	}
 }

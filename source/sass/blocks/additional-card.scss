@@ -1,0 +1,43 @@
+.additional-card {
+	background-color: #ffffff;
+	color: #000000;
+}
+
+.additional-card__title {
+	font-size: 24px;
+	line-height: 24px;
+	font-family: var(--accent-font);
+	font-weight: 400;
+}
+
+.additional-card__item::marker {
+	color: transparent;
+}
+
+.additional-card__link {
+	font-family: var(--accent-font);
+	color: #222222;
+	text-decoration: none;
+}
+
+.additional-card__name {
+	font-size: 16px;
+	line-height: 16px;
+	text-transform: uppercase;
+	font-weight: 400;
+}
+
+.characteristics__list {
+	font-size: 14px;
+	line-height: 14px;
+	color: #444444;
+	font-family: var(--main-font);
+}
+
+.additional-card__button {
+	font-family: var(--accent-font);
+	text-decoration: none;
+	color: #ffffff;
+	text-transform: uppercase;
+	background-color: #68b738;
+}

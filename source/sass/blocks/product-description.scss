@@ -1,0 +1,20 @@
+.product-description {
+	background-color: #ffffff;
+	color: #000000;
+}
+
+.product-description__title {
+	font-size: 36px;
+	line-height: 40px;
+	font-family: var(--accent-font);
+	font-weight: 400;
+}
+
+.product-description__item {
+	color: #444444;
+	font-family: var(--main-font);
+}
+
+.product-description__item::marker {
+	color: transparent;
+}

@@ -1,0 +1,32 @@
+.options {
+	background-color: #f2f2f2;
+	color: #000000;
+}
+
+.options__item::marker {
+	color: transparent;
+}
+
+.options__title {
+	font-size: 24px;
+	line-height: 37px;
+	text-transform: uppercase;
+	font-family: var(--accent-font);
+	font-weight: 400;
+}
+
+.options__text {
+	font-size: 14px;
+	line-height: 18px;
+	color: #444444;
+	font-family: var(--main-font);
+}
+
+.options__link {
+	font-family: var(--accent-font);
+	color: #000000;
+	text-decoration: none;
+	font-size: 16px;
+	line-height: 16px;
+	text-transform: uppercase;
+}

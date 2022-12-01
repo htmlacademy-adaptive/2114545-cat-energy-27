@@ -1,0 +1,26 @@
+.main-hero {
+	color: #ffffff;
+	background-color: rgba(104, 183, 56, 0.85);
+	font-family: var(--accent-font);
+}
+
+.main-hero__title {
+	font-size: 36px;
+	line-height: 36px;
+	font-weight: 400;
+}
+
+.main-hero__slogan {
+	font-size: 14px;
+	line-height: 14px;
+	font-weight: 400;
+	text-transform: uppercase;
+}
+
+.main-hero__link {
+	font-family: var(--accent-font);
+	color: #ffffff;
+	text-decoration: none;
+	font-size: 14px;
+	line-height: 18px;
+}

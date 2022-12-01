@@ -8,23 +8,13 @@
 		</a>
 		<button class="main-navigation__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
 		<ul class="main-navigation__list">
-			<li class="main-navigation__item main-navigation__item--current">
-				<a class="main-navigation-link" href="javascript:void(0)">
-					Главная
-				</a>
-			</li>
-
-			<li class=" main-navigation__item">
-				<a class="main-navigation-link" href="javascript:void(0)">
-					Каталог продукции
-				</a>
-			</li>
-
+			{% for page in pages %}
 			<li class="main-navigation__item">
-				<a class="main-navigation-link" href="javascript:void(0)">
-					Подбор программы
+				<a class="main-navigation-link" href="{{page.path}}" {% if permalink==page.path %}aria-current="page" {% endif %}>
+					{{page.name}}
 				</a>
 			</li>
+			{% endfor %}
 
 		</ul>
 	</nav>
