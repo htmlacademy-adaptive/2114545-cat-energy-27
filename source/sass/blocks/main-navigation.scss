@@ -1,3 +1,8 @@
+.main-navigation {
+	display: flex;
+	justify-content: space-around;
+}
+
 .main-navigation__item::marker {
 	color: transparent;
 }
@@ -6,4 +11,20 @@
 	font-family: var(--accent-font);
 	color: #000000;
 	text-decoration: none;
+}
+
+@media #{$not-mobile} {
+	.main-navigation__toggle {
+		display: none;
+	}
+
+	.main-navigation__list {
+		display: flex;
+	}
+}
+
+@media #{$mobile-only} {
+	.main-navigation__list {
+		display: none;
+	}
 }

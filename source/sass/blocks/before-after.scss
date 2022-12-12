@@ -1,6 +1,9 @@
 .before-after {
-	background-color: #eaeaeaea;
 	color: #000000;
+
+	@media #{$mobile-only} {
+		background-color: #eaeaeaea;
+	}
 }
 
 .before-after__title {

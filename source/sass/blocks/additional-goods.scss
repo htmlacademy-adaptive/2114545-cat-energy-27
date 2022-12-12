@@ -1,3 +1,16 @@
+.additional-goods {
+	display: grid;
+	gap: 19px;
+
+	@media #{$tablet-only} {
+		grid-template-columns: 1fr 1fr;
+	}
+
+	@media #{$desktop-only} {
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+	}
+}
+
 .additional-goods__title {
 	font-size: 24px;
 	line-height: 26px;

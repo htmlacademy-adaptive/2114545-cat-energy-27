@@ -1,6 +1,25 @@
 .options {
-	background-color: #f2f2f2;
 	color: #000000;
+}
+
+.options__list {
+	display: grid;
+	padding: 0;
+	margin: 0;
+	gap: 20px;
+
+	@media #{$not-mobile} {
+		gap: 30px;
+	}
+
+	@media #{$desktop-only} {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 80px;
+	}
+}
+
+.options__item {
+	background-color: #f2f2f2;
 }
 
 .options__item::marker {

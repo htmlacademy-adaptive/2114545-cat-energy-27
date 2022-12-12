@@ -10,6 +10,25 @@
 	font-weight: 400;
 }
 
+.product-description__list {
+	display: grid;
+	padding: 0;
+	margin: 0;
+	gap: 20px;
+
+	@media #{$not-mobile} {
+		grid-template-columns: repeat(2, 1fr);
+		row-gap: 37px;
+		column-gap: 153px;
+	}
+
+	@media #{$desktop-only} {
+		display: flex;
+		flex-wrap: wrap;
+		column-gap: 94px;
+	}
+}
+
 .product-description__item {
 	color: #444444;
 	font-family: var(--main-font);

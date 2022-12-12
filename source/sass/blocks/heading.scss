@@ -1,0 +1,9 @@
+.heading {
+	font-family: var(--accent-font);
+	font-weight: 400;
+
+	&--lvl_1 {
+		font-size: 36px;
+		line-height: 36px;
+	}
+}

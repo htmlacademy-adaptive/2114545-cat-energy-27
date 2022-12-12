@@ -1,5 +1,12 @@
 .address {
-	background-color: #ffffff;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	gap: 2px;
+
+	@media #{$tablet-only} {
+		gap: 296px;
+	}
 }
 
 .address__cooperation {

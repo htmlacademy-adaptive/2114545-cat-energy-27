@@ -5,3 +5,17 @@
 .information__program-label {
 	color: #222222;
 }
+
+.information__input {
+	@media #{$mobile-only} {
+		width: 228px;
+	}
+
+	@media #{$tablet-only} {
+		width: 570px;
+	}
+
+	@media #{$desktop-only} {
+		width: 509px;
+	}
+}

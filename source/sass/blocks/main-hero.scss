@@ -1,7 +1,18 @@
 .main-hero {
 	color: #ffffff;
-	background-color: rgba(104, 183, 56, 0.85);
 	font-family: var(--accent-font);
+	position: relative;
+}
+
+.main-hero::before {
+	@media #{$mobile-only} {
+		content: "";
+		position: absolute;
+		width: 320px;
+		height: 302px;
+		background-color: rgba(104, 183, 56, 0.85);
+		z-index: -1;
+	}
 }
 
 .main-hero__title {
