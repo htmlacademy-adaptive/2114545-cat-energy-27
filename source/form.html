@@ -12,26 +12,37 @@
 		<form class="questionary__form form" action="https://echo.htmlacademy.ru/" method="post">
 
 			<fieldset class="form__group-information information">
-				<legend class="visually-hidden">Данные кота</legend>
-				<label class="information__label" for="name">Имя:<span aria-hidden="true">*</span></label>
-				<input class="information__input" type="text" id="name" placeholder="Укажите кличку" value="Барсик" name="cat-name" required>
-				<label class="information__label" for="weight">Вес (кг):<span aria-hidden="true">*</span></label>
-				<input class="information__input" type="text" id="weight" placeholder="Укажите вес" value="7" name="cat-weight" required>
-				<label class="information__label" for="age">Возраст (лет):</label>
-				<input class="information__input" type="text" id="age" placeholder="Укажите возраст" value="7" name="cat-age">
 
-				<label class="information__program-label">
-					<input class="information__program-input" type="checkbox" name="type-of-program" value="slim" checked>
-					Похудение
-				</label>
-				<label class="information__program-label">
-					<input class="information__program-input" type="checkbox" name="type-of-program" value="pro">
-					Набор массы
-				</label>
-				<label class="information__program-label">
-					<input class="information__program-input" type="checkbox" name="type-of-program" value="advice">
-					Не знаю (Нужен ваш совет)
-				</label>
+				<div class="information__wrapper">
+					<div class="information__field-wrapper">
+						<legend class="visually-hidden">Данные кота</legend>
+						<label class="information__label" for="name">Имя:<span aria-hidden="true">*</span></label>
+						<input class="information__input" type="text" id="name" placeholder="Укажите кличку" value="Барсик" name="cat-name" required>
+					</div>
+					<div class="information__field">
+						<label class="information__label" for="weight">Вес (кг):<span aria-hidden="true">*</span></label>
+						<input class="information__input" type="text" id="weight" placeholder="Укажите вес" value="7" name="cat-weight" required>
+					</div>
+					<div class="information__field">
+						<label class="information__label" for="age">Возраст (лет):</label>
+						<input class="information__input" type="text" id="age" placeholder="Укажите возраст" value="7" name="cat-age">
+					</div>
+
+					<div class="information__checkbox-wrapper">
+						<label class="information__program-label">
+							<input class="information__program-input" type="checkbox" name="type-of-program" value="slim" checked>
+							Похудение
+						</label>
+						<label class="information__program-label">
+							<input class="information__program-input" type="checkbox" name="type-of-program" value="pro">
+							Набор массы
+						</label>
+						<label class="information__program-label">
+							<input class="information__program-input" type="checkbox" name="type-of-program" value="advice">
+							Не знаю (Нужен ваш совет)
+						</label>
+					</div>
+				</div>
 			</fieldset>
 
 			<fieldset class="form__group-contacts contacts">
@@ -66,10 +77,10 @@
 					Витамины
 				</label>
 			</fieldset>
-
-			<button class="button subscription-button-sign-up" type="submit">Отправить заявку</button>
-			<span class="required-fields" aria-hidden="true">* — Обязательные поля</span>
-
+			<div class="form__button-wrapper">
+				<button class="form__button" type="submit">Отправить заявку</button>
+				<span class="form__required-fields" aria-hidden="true">* — Обязательные поля</span>
+			</div>
 		</form>
 	</section>
 

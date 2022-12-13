@@ -1,3 +1,10 @@
+.information__wrapper {
+	@media #{$desktop-only} {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
 .information__label {
 	color: #444444;
 }
@@ -18,4 +25,24 @@
 	@media #{$desktop-only} {
 		width: 509px;
 	}
+}
+
+.information__field-wrapper {
+	display: grid;
+
+	@media #{$mobile-only} {
+		grid-template-columns: 94px 1fr;
+	}
+
+	@media #{$tablet-only} {
+		grid-template-columns: 117px 1fr;
+	}
+
+	@media #{$desktop-only} {
+		grid-template-columns: 117px 1fr;
+	}
+}
+
+.information__checkbox-wrapper {
+	display: grid;
 }

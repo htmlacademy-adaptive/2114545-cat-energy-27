@@ -1,15 +1,9 @@
 .form__group-information {
-	display: flex;
-	flex-direction: column;
 	padding: 0;
 	border: none;
 	text-transform: uppercase;
 	font-size: 16px;
 	line-height: 18px;
-
-	@media #{$desktop-only} {
-		display: grid;
-	}
 }
 
 .form__group-contacts {
@@ -20,4 +14,37 @@
 .form__group-additional-goods {
 	padding: 0;
 	border: none;
+}
+
+.form__button-wrapper {
+	display: flex;
+	flex-direction: column;
+
+	@media #{$tablet-only} {
+		flex-direction: row;
+		justify-content: space-around;
+	}
+
+	@media #{$desktop-only} {
+		flex-direction: row;
+		justify-content: space-around;
+	}
+}
+
+.form__button {
+	display: block;
+	text-align: center;
+	font-family: var(--accent-font);
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 20px;
+	background-color: #68b738;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #ffffff;
+	border: none;
+}
+
+.form__required-fields {
+	text-align: center;
 }

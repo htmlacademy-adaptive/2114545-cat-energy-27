@@ -2,6 +2,23 @@
 	color: #000000;
 }
 
+.additional-products__wrapper {
+	display: grid;
+
+	@media #{$mobile-only} {
+		row-gap: 54px;
+	}
+
+	@media #{$tablet-only} {
+		row-gap: 69px;
+	}
+
+	@media #{$desktop-only} {
+		grid-template-columns: 896px 1fr;
+		column-gap: 79px;
+	}
+}
+
 .additional-products__title {
 	font-size: 24px;
 	line-height: 24px;
