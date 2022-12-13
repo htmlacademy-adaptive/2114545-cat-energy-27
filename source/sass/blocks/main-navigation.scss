@@ -31,3 +31,9 @@
 		display: none;
 	}
 }
+
+.main-navigation__item:not(:last-child) {
+	@media #{$not-mobile} {
+		padding-right: 33px;
+	}
+}
