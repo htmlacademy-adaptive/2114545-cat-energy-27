@@ -1,5 +1,7 @@
 
 .characteristics__list {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
 	font-size: 14px;
 	line-height: 14px;
 	color: #444444;

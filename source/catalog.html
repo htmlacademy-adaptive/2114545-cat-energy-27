@@ -145,62 +145,67 @@
 
 	<section class="additional-products page__centerer">
 		<h2 class="additional-products__title">Дополнительные товары</h2>
-		<ul class="additional-products__list">
-			<li class="additional-products__item">
-				<a class="additional-products__link" href="javascript:void(0)">
-					<h3 class="additional-products__name">Сахарозаменитель</h3>
-				</a>
-				<div class="additional-products__characteristics characteristics">
-					<dl class="characteristics__list">
-						<dt class="characteristics__quantity">1 упаковка (100 г)</dt>
-						<dd class="characteristics__price">200 ₽</dd>
-					</dl>
-				</div>
-				<a class="additional-products__button" href="javascript:void(0)">Заказать</a>
-			</li>
+		<div class="additional-products__wrapper">
+			<ul class="additional-products__list">
+				<li class="additional-products__item">
+					<a class="additional-products__link" href="javascript:void(0)">
+						<h3 class="additional-products__name">Сахарозаменитель</h3>
+					</a>
+					<div class="additional-products__characteristics characteristics">
+						<dl class="characteristics__list">
+							<dt class="characteristics__quantity">1 упаковка (100 г)</dt>
+							<dd class="characteristics__price">200 ₽</dd>
+						</dl>
+					</div>
+					<a class="additional-products__button" href="javascript:void(0)">Заказать</a>
+				</li>
 
-			<li class="additional-products__item">
-				<a class="additional-products__link" href="javascript:void(0)">
-					<h3 class="additional-products__name">Питьевая вода</h3>
-				</a>
-				<div class="additional-products__characteristics characteristics">
-					<dl class="characteristics__list">
-						<dt class="characteristics__quantity">5 литров</dt>
-						<dd class="characteristics__price">50 ₽</dd>
-					</dl>
-				</div>
-				<a class="additional-products__button" href="javascript:void(0)">Заказать</a>
-			</li>
-			<li class="additional-products__item">
-				<a class="additional-products__link" href="javascript:void(0)">
-					<h3 class="additional-products__name">Молоко</h3>
-				</a>
+				<li class="additional-products__item">
+					<a class="additional-products__link" href="javascript:void(0)">
+						<h3 class="additional-products__name">Питьевая вода</h3>
+					</a>
+					<div class="additional-products__characteristics characteristics">
+						<dl class="characteristics__list">
+							<dt class="characteristics__quantity">5 литров</dt>
+							<dd class="characteristics__price">50 ₽</dd>
+						</dl>
+					</div>
+					<a class="additional-products__button" href="javascript:void(0)">Заказать</a>
+				</li>
+				<li class="additional-products__item">
+					<a class="additional-products__link" href="javascript:void(0)">
+						<h3 class="additional-products__name">Молоко</h3>
+					</a>
 
-				<div class="additional-products__characteristics characteristics">
-					<dl class="characteristics__list">
-						<dt class="characteristics__quantity">1 литр</dt>
-						<dd class="characteristics__price">100 ₽</dd>
-					</dl>
-				</div>
-				<a class="additional-products__button" href="javascript:void(0)">Заказать</a>
-			</li>
-			<li class="additional-products__item">
-				<a class="additional-products__link" href="javascript:void(0)">
-					<h3 class="additional-products__name">Витамины</h3>
-				</a>
+					<div class="additional-products__characteristics characteristics">
+						<dl class="characteristics__list">
+							<dt class="characteristics__quantity">1 литр</dt>
+							<dd class="characteristics__price">100 ₽</dd>
+						</dl>
+					</div>
+					<a class="additional-products__button" href="javascript:void(0)">Заказать</a>
+				</li>
+				<li class="additional-products__item">
+					<a class="additional-products__link" href="javascript:void(0)">
+						<h3 class="additional-products__name">Витамины</h3>
+					</a>
 
-				<div class="additional-products__characteristics characteristics">
-					<dl class="characteristics__list">
-						<dt class="characteristics__quantity">1 упаковка (30 г)</dt>
-						<dd class="characteristics__price">300 ₽</dd>
-					</dl>
-				</div>
-				<a class="additional-products__button" href="javascript:void(0)">Заказать</a>
-			</li>
-			<li class="additional-products__item gifts">
+					<div class="additional-products__characteristics characteristics">
+						<dl class="characteristics__list">
+							<dt class="characteristics__quantity">1 упаковка (30 г)</dt>
+							<dd class="characteristics__price">300 ₽</dd>
+						</dl>
+					</div>
+					<a class="additional-products__button" href="javascript:void(0)">Заказать</a>
+				</li>
+			</ul>
+
+			<div class="gifts">
+				<h2 class="visually-hidden">Подарок при заказе</h2>
 				<p class="gifts-text">Закажите все и получите чехол для кота в подарок!</p>
-		</ul>
+			</div>
 
+		</div>
 	</section>
 
 	{% include "./templates/address.twig" %}

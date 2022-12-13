@@ -13,18 +13,21 @@
 	text-decoration: none;
 }
 
-@media #{$not-mobile} {
-	.main-navigation__toggle {
+.main-navigation__toggle {
+	@media #{$not-mobile} {
 		display: none;
-	}
-
-	.main-navigation__list {
-		display: flex;
 	}
 }
 
-@media #{$mobile-only} {
-	.main-navigation__list {
+.main-navigation__list {
+	margin: 0;
+	padding: 0;
+
+	@media #{$not-mobile} {
+		display: flex;
+	}
+
+	@media #{$mobile-only} {
 		display: none;
 	}
 }

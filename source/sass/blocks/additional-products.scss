@@ -19,11 +19,6 @@
 	@media #{$not-mobile} {
 		row-gap: 54px;
 	}
-
-	@media #{$desktop-only} {
-		display: flex;
-		column-gap: 94px;
-	}
 }
 
 .additional-products__item::marker {
@@ -31,9 +26,14 @@
 }
 
 .additional-products__item {
+	display: grid;
+
+	@media #{$tablet-only} {
+		grid-template-columns: 1fr 1fr;
+	}
+
 	@media #{$desktop-only} {
-		display: flex;
-		flex-wrap: wrap;
+		grid-template-columns: 1fr 1fr 1fr;
 	}
 }
 
@@ -60,4 +60,9 @@
 	text-transform: uppercase;
 	font-size: 16px;
 	line-height: 20px;
+
+	@media #{$tablet-only} {
+		grid-column-start: 1;
+		grid-column-end: 3;
+	}
 }
