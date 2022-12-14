@@ -15,6 +15,11 @@
 	line-height: 20px;
 	font-family: var(--accent-font);
 	font-weight: 400;
+
+	@media #{$not-mobile} {
+		font-size: 20px;
+		line-height: 26px;
+	}
 }
 
 .address__text {
@@ -22,4 +27,9 @@
 	font-size: 14px;
 	line-height: 20px;
 	font-family: var(--main-font);
+
+	@media #{$not-mobile} {
+		font-size: 16px;
+		line-height: 20px;
+	}
 }

@@ -5,47 +5,52 @@
 {% block main %}
 <main>
 	<section class="questionary">
-		<h2 class="questionary__title">Подбор программы</h2>
-		<p class="questionary__text">Заполните анкету, и мы подберем
-			программу питания для вашего кота</p>
+		<div class="page__centerer">
+			<h2 class="questionary__title">Подбор программы</h2>
+			<p class="questionary__text">Заполните анкету, и мы подберем
+				программу питания для вашего кота</p>
+		</div>
 
 		<form class="questionary__form form" action="https://echo.htmlacademy.ru/" method="post">
 
-			<fieldset class="form__group-information information">
+			<fieldset class="form__group-information information page__centerer">
 
 				<div class="information__wrapper">
-					<div class="information__field-wrapper">
 
+					<div class="information__field-wrapper">
 						<label class="information__label" for="name">Имя:<span aria-hidden="true">*</span></label>
 						<input class="information__input" type="text" id="name" placeholder="Укажите кличку" value="Барсик" name="cat-name" required>
 					</div>
+
 					<div class="information__field">
 						<label class="information__label" for="weight">Вес (кг):<span aria-hidden="true">*</span></label>
 						<input class="information__input" type="text" id="weight" placeholder="Укажите вес" value="7" name="cat-weight" required>
 					</div>
+
 					<div class="information__field">
 						<label class="information__label" for="age">Возраст (лет):</label>
 						<input class="information__input" type="text" id="age" placeholder="Укажите возраст" value="7" name="cat-age">
 					</div>
 
-					<div class="information__checkbox-wrapper">
+					<div class="information__radio-wrapper">
 						<label class="information__program-label">
-							<input class="information__program-input" type="checkbox" name="type-of-program" value="slim" checked>
+							<input class="information__program-input" type="radio" name="type-of-program" value="slim" checked>
 							Похудение
 						</label>
 						<label class="information__program-label">
-							<input class="information__program-input" type="checkbox" name="type-of-program" value="pro">
+							<input class="information__program-input" type="radio" name="type-of-program" value="pro">
 							Набор массы
 						</label>
 						<label class="information__program-label">
-							<input class="information__program-input" type="checkbox" name="type-of-program" value="advice">
+							<input class="information__program-input" type="radio" name="type-of-program" value="advice">
 							Не знаю (Нужен ваш совет)
 						</label>
 					</div>
+
 				</div>
 			</fieldset>
 
-			<fieldset class="form__group-contacts contacts">
+			<fieldset class="form__group-contacts contacts page__centerer">
 				<legend class="contacts__title">Контактные данные (владельца кота)</legend>
 				<label class="contacts__label" for="email">E-mail:<span aria-hidden="true">*</span></label>
 				<input class="contacts__input" placeholder="kuklachev@gmail.com" type="email" id="email" name="email" required>
@@ -53,12 +58,12 @@
 				<input class="contacts__input" placeholder="8 (960) 900-60-90" type="tel" id="phone" name="phone" required>
 			</fieldset>
 
-			<div class="questionary__comments comments">
+			<div class="questionary__comments comments page__centerer">
 				<label class="comments__label" for="comments">Комментарий</label>
 				<textarea class="comments__text" id="comments" placeholder="Расскажите обо всех повадках кота" name="comments"></textarea>
 			</div>
 
-			<fieldset class="form__group-additional-goods additional-goods">
+			<fieldset class="form__group-additional-goods additional-goods page__centerer">
 				<legend class="additional-goods__title">Дополнительно</legend>
 				<label class="additional-goods__label">
 					<input class="additional-goods__input" type="checkbox" name="type-of-additional-goods" value="sweetener" checked>
@@ -77,7 +82,7 @@
 					Витамины
 				</label>
 			</fieldset>
-			<div class="form__button-wrapper">
+			<div class="form__button-wrapper page__centerer">
 				<button class="form__button" type="submit">Отправить заявку</button>
 				<span class="form__required-fields" aria-hidden="true">* — Обязательные поля</span>
 			</div>
