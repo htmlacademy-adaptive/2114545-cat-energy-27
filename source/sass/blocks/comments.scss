@@ -1,4 +1,26 @@
 .comments__label {
 	font-size: 24px;
 	line-height: 26px;
+	padding-bottom: 14px;
+
+	@media #{$not-mobile} {
+		font-size: 36px;
+		line-height: 36px;
+		padding-bottom: 40px;
+	}
+}
+
+.comments__text {
+	min-width: 280px;
+	min-height: 150px;
+
+	@media #{$tablet-only} {
+		min-width: 631px;
+		min-height: 174px;
+	}
+
+	@media #{$desktop-only} {
+		min-width: 1220px;
+		min-height: 174px;
+	}
 }

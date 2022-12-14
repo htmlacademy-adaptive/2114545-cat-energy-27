@@ -19,15 +19,16 @@
 .form__button-wrapper {
 	display: flex;
 	flex-direction: column;
+	margin-bottom: 32px;
 
 	@media #{$tablet-only} {
 		flex-direction: row;
-		justify-content: space-around;
+		margin-bottom: 72px;
 	}
 
 	@media #{$desktop-only} {
 		flex-direction: row;
-		justify-content: space-around;
+		margin-bottom: 82px;
 	}
 }
 
@@ -43,8 +44,32 @@
 	text-transform: uppercase;
 	color: #ffffff;
 	border: none;
+	padding: 7px 44px 7px 44px;
+
+
+	@media #{$tablet-only} {
+		font-size: 20px;
+		padding: 13px 45px 13px 45px;
+	}
+
+	@media #{$desktop-only} {
+		font-size: 20px;
+		padding: 13px 188px 13px 188px;
+	}
 }
 
 .form__required-fields {
 	text-align: center;
+
+	@media #{$mobile-only} {
+		padding-top: 21px;
+	}
+
+	@media #{$tablet-only} {
+		padding-left: 64px;
+	}
+
+	@media #{$desktop-only} {
+		padding-left: 84px;
+	}
 }

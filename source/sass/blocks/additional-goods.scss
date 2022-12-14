@@ -1,19 +1,29 @@
 .additional-goods {
 	display: grid;
 	gap: 19px;
+	margin-bottom: 34px;
 
 	@media #{$tablet-only} {
 		grid-template-columns: 1fr 1fr;
+		margin-bottom: 54px;
 	}
 
 	@media #{$desktop-only} {
 		grid-template-columns: 1fr 1fr 1fr 1fr;
+		margin-bottom: 61px;
 	}
 }
 
 .additional-goods__title {
 	font-size: 24px;
 	line-height: 26px;
+	padding-bottom: 10px;
+
+	@media #{$not-mobile} {
+		font-size: 36px;
+		line-height: 36px;
+		padding-bottom: 21px;
+	}
 }
 
 .additional-goods__label {

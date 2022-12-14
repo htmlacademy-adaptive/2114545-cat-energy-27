@@ -15,4 +15,9 @@
 	line-height: 18px;
 	text-transform: uppercase;
 	font-weight: 400;
+
+	@media #{$not-mobile} {
+		font-size: 20px;
+		line-height: 30px;
+	}
 }
