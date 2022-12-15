@@ -15,13 +15,11 @@
 }
 
 .additional-goods__title {
-	font-size: 24px;
-	line-height: 26px;
-	padding-bottom: 10px;
+	@media #{$mobile-only} {
+		padding-bottom: 10px;
+	}
 
 	@media #{$not-mobile} {
-		font-size: 36px;
-		line-height: 36px;
 		padding-bottom: 21px;
 	}
 }

@@ -6,7 +6,7 @@
 <main>
 	<section class="questionary">
 		<div class="page__centerer">
-			<h2 class="questionary__title">Подбор программы</h2>
+			<h1 class="questionary__title heading heading--lvl_1 ">Подбор программы</h1>
 			<p class="questionary__text">Заполните анкету, и мы подберем
 				программу питания для вашего кота</p>
 		</div>
@@ -14,6 +14,7 @@
 		<form class="questionary__form form" action="https://echo.htmlacademy.ru/" method="post">
 
 			<fieldset class="form__group-information information page__centerer">
+				<legend class="visually-hidden">Данные кота</legend>
 
 				<div class="information__wrapper">
 
@@ -51,7 +52,7 @@
 			</fieldset>
 
 			<fieldset class="form__group-contacts contacts page__centerer">
-				<legend class="contacts__title">Контактные данные (владельца кота)</legend>
+				<legend class="contacts__title heading heading--lvl_2 heading--decoration_lines">Контактные данные (владельца кота)</legend>
 				<label class="contacts__label" for="email">E-mail:<span aria-hidden="true">*</span></label>
 				<input class="contacts__input" placeholder="kuklachev@gmail.com" type="email" id="email" name="email" required>
 				<label class="contacts__label" for="phone">Телефон:<span aria-hidden="true">*</span></label>
@@ -59,12 +60,12 @@
 			</fieldset>
 
 			<div class="questionary__comments comments page__centerer">
-				<label class="comments__label" for="comments">Комментарий</label>
+				<label class="comments__label heading heading--lvl_2 heading--decoration_lines" for="comments">Комментарий</label>
 				<textarea class="comments__text" id="comments" placeholder="Расскажите обо всех повадках кота" name="comments"></textarea>
 			</div>
 
 			<fieldset class="form__group-additional-goods additional-goods page__centerer">
-				<legend class="additional-goods__title">Дополнительно</legend>
+				<legend class="additional-goods__title heading heading--lvl_2 heading--decoration_lines">Дополнительно</legend>
 				<label class="additional-goods__label">
 					<input class="additional-goods__input" type="checkbox" name="type-of-additional-goods" value="sweetener" checked>
 					Сахарозаменитель

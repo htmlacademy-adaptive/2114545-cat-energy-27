@@ -3,7 +3,26 @@
 	font-weight: 400;
 
 	&--lvl_1 {
-		font-size: 36px;
-		line-height: 36px;
+		@media #{$mobile-only} {
+			font-size: 36px;
+			line-height: 36px;
+		}
+
+		@media #{$not-mobile} {
+			font-size: 60px;
+			line-height: 60px;
+		}
+	}
+
+	&--lvl_2 {
+		@media #{$mobile-only} {
+			font-size: 24px;
+			line-height: 26px;
+		}
+
+		@media #{$not-mobile} {
+			font-size: 36px;
+			line-height: 36px;
+		}
 	}
 }
