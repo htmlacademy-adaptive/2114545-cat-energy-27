@@ -6,6 +6,20 @@
 		@media #{$mobile-only} {
 			font-size: 36px;
 			line-height: 36px;
+			text-align: center;
+		}
+
+		@media #{$not-mobile} {
+			font-size: 60px;
+			line-height: 60px;
+			color: #000000;
+		}
+	}
+
+	&--lvl_2 {
+		@media #{$mobile-only} {
+			font-size: 36px;
+			line-height: 40px;
 		}
 
 		@media #{$not-mobile} {
@@ -14,10 +28,12 @@
 		}
 	}
 
-	&--lvl_2 {
+	&--lvl_3 {
+		text-transform: uppercase;
+
 		@media #{$mobile-only} {
 			font-size: 24px;
-			line-height: 26px;
+			line-height: 37px;
 		}
 
 		@media #{$not-mobile} {

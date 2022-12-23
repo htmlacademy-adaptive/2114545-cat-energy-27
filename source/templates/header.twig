@@ -6,16 +6,20 @@
 		<a class="main-header__logo" href="index.html">
 			<img class="main-header__logo-text" src="img/logo-mobile-text.svg" width="101" height="18" alt="Лого Cat Energy.">
 		</a>
-		<button class="main-navigation__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
-		<ul class="main-navigation__list">
-			{% for page in pages %}
-			<li class="main-navigation__item">
-				<a class="main-navigation-link" href="{{page.path}}" {% if permalink==page.path %}aria-current="page" {% endif %}>
-					{{page.name}}
-				</a>
-			</li>
-			{% endfor %}
+		<div class="main-navigation__group main-navigation__group--closed">
+			<button class="main-navigation__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+			<div class="main-navigation__wrapper">
+				<ul class="main-navigation__list">
+					{% for page in pages %}
+					<li class="main-navigation__item">
+						<a class="main-navigation-link" href="{{page.path}}" {% if permalink==page.path %}aria-current="page" {% endif %}>
+							{{page.name}}
+						</a>
+					</li>
+					{% endfor %}
 
-		</ul>
+				</ul>
+			</div>
+		</div>
 	</nav>
 </header>

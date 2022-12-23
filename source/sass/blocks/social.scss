@@ -1,3 +1,27 @@
 .social__item::marker {
 	color: transparent;
 }
+
+.social__link--icon-vk::before {
+	content: "";
+	display: block;
+	width: 28px;
+	height: 22px;
+	background: url("/source/icons/vkontakte.svg") no-repeat center / contain;
+}
+
+.social__link--icon-youtube {
+	content: "";
+	display: block;
+	width: 28px;
+	height: 22px;
+	background: url("/source/icons/youtube.svg") no-repeat center / contain;
+}
+
+.social__link--icon-telegram {
+	content: "";
+	display: block;
+	width: 28px;
+	height: 22px;
+	background: url("/source/icons/telegram.svg") no-repeat center / contain;
+}

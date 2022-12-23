@@ -3,14 +3,14 @@
 
 	@media #{$mobile-only} {
 		background-color: #eaeaea;
+		padding-top: 25px;
+		padding-bottom: 40px;
 	}
 }
 
 .before-after__title {
-	font-size: 36px;
-	line-height: 40px;
-	font-family: var(--accent-font);
-	font-weight: 400;
+	margin-top: 0;
+	padding-bottom: 4px;
 }
 
 .before-after__description {
@@ -18,4 +18,43 @@
 	line-height: 18px;
 	color: #444444;
 	font-family: var(--main-font);
+}
+
+.before-after__example-list {
+	display: grid;
+	text-align: center;
+	font-family: var(--accent-font);
+
+	@media #{$mobile-only} {
+		grid-template-columns: 1fr 1fr;
+	}
+
+	@media #{$tablet-only} {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+
+	@media #{$desktop-only} {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+.before-after__food-costs {
+	text-transform: uppercase;
+
+	@media #{$mobile-only} {
+		grid-column-start: 1;
+		grid-column-end: 3;
+		display: flex;
+		flex-wrap: wrap;
+		text-transform: uppercase;
+	}
+
+	@media #{$tablet-only} {
+		font-size: 20px;
+		line-height: 20px;
+	}
+
+	@media #{$desktop-only} {
+		display: flex;
+	}
 }

@@ -1,16 +1,22 @@
 .more-products__show-text {
-	font-size: 16px;
-	line-height: 20px;
 	text-transform: uppercase;
 	color: #111111;
 	font-family: var(--accent-font);
+
+	@media #{$mobile-only} {
+		font-size: 16px;
+		line-height: 20px;
+	}
 }
 
 .more-products__text {
-	font-size: 12px;
-	line-height: 16px;
 	color: #444444;
 	font-family: var(--main-font);
+
+	@media #{$mobile-only} {
+		font-size: 12px;
+		line-height: 16px;
+	}
 }
 
 .more-products__button {
@@ -18,8 +24,13 @@
 	color: #444444;
 	text-decoration: none;
 	background-color: #f2f2f2;
-	font-size: 16px;
-	line-height: 20px;
 	display: block;
 	text-align: center;
+	text-transform: uppercase;
+
+	@media #{$mobile-only} {
+		font-size: 16px;
+		line-height: 20px;
+		padding: 10px 94px 10px 94px;
+	}
 }

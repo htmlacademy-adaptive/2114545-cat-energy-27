@@ -2,36 +2,83 @@
 	color: #ffffff;
 	font-family: var(--accent-font);
 	position: relative;
+	margin-bottom: 20px;
+
+	@media #{$tablet-only} {
+		padding-top: 2px;
+		padding-left: 117px;
+	}
 }
 
 .main-hero::before {
 	@media #{$mobile-only} {
 		content: "";
 		position: absolute;
-		width: 320px;
+		width: 100%;
 		height: 302px;
 		background-color: rgb(104 183 56 / 0.85);
 		z-index: -1;
 	}
 }
 
-.main-hero__title {
-	font-size: 36px;
-	line-height: 36px;
-	font-weight: 400;
-}
+/*не работает
+.main-hero::after {
+	@media #{$mobile-only} {
+		content: "";
+		display: block;
+		width: 320px;
+		height: 302px;
+		background-image: url("/source/img/main-hero-cat.png");
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: contain;
+	}
+}*/
 
 .main-hero__slogan {
 	font-size: 14px;
 	line-height: 14px;
 	font-weight: 400;
 	text-transform: uppercase;
+
+	@media #{$not-mobile} {
+		font-size: 20px;
+		line-height: 20px;
+		color: #000000;
+	}
+}
+
+.main-hero__image {
+	display: block;
+	margin: 0 auto;
 }
 
 .main-hero__link {
 	font-family: var(--accent-font);
 	color: #ffffff;
 	text-decoration: none;
-	font-size: 14px;
-	line-height: 18px;
+	display: inline-block;
+	text-align: center;
+	background-color: #68b738;
+
+	@media #{$mobile-only} {
+		display: block;
+		font-size: 14px;
+		line-height: 18px;
+		padding: 7px 44px 7px 44px;
+		margin-right: 20px;
+		margin-left: 20px;
+	}
+
+	@media #{$tablet-only} {
+		padding: 14px 26px 14px 26px;
+		font-size: 20px;
+		line-height: 20px;
+	}
+
+	@media #{$desktop-only} {
+		padding: 14px 26px 14px 26px;
+		font-size: 20px;
+		line-height: 20px;
+	}
 }
