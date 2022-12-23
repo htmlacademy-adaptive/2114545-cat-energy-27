@@ -130,10 +130,6 @@
 	color: #000000;
 	text-decoration: none;
 
-	@media #{$desktop-only} {
-		color: #ffffff;
-	}
-
 	@media #{$tablet-only} {
 		&[aria-current="page"] {
 			position: relative;
@@ -146,6 +142,22 @@
 				left: 0;
 				height: 2px;
 				background-color: #68b738;
+			}
+		}
+	}
+
+	@media #{$desktop-only} {
+		&[aria-current="page"] {
+			position: relative;
+
+			&::after {
+				content: "";
+				position: absolute;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				height: 2px;
+				background-color: #ffffff;
 			}
 		}
 	}

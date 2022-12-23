@@ -23,9 +23,11 @@
 .additional-products__title {
 	font-family: var(--accent-font);
 	font-weight: 400;
-	display: inline-block;
-	background-color: #ffffff;
+	--air-gap: 20px;
+	--line-color: #68b738;
+	--line-thickness: 2px;
 	position: relative;
+	inline-size: fit-content;
 
 	@media #{$mobile-only} {
 		font-size: 24px;
@@ -35,16 +37,11 @@
 	@media #{$tablet-only} {
 		font-size: 36px;
 		line-height: 36px;
-		padding-right: 37px;
-		padding-left: 36px;
-		margin-left: -40px;
 	}
 
 	@media #{$desktop-only} {
 		font-size: 36px;
 		line-height: 36px;
-		padding-right: 35px;
-		padding-left: 40px;
 	}
 }
 
@@ -52,11 +49,12 @@
 	@media #{$not-mobile} {
 		content: "";
 		position: absolute;
-		top: 50%;
-		height: 2px;
-		width: 1000%;
-		background-color: #68b738;
-		z-index: -1;
+		inset-block: calc((100% - var(--line-thickness)) / 2);
+		inset-block-end: calc(100% + var(--air-gap));
+		block-size: var(--line-thickness);
+		inline-size: calc(100vw - 100% - var(--air-gap));
+		background-color: var(--line-color);
+		box-shadow: calc(100vw + var(--air-gap)) 0 0 0 var(--line-color);
 	}
 }
 

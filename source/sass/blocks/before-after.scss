@@ -51,6 +51,11 @@
 	}
 }
 
+.before-after__example-item--frame {
+	display: grid;
+	text-transform: lowercase;
+}
+
 .before-after__example-value--frame {
 	font-size: 24px;
 	line-height: 24px;
@@ -67,9 +72,4 @@
 
 .before-after__example-item {
 	text-transform: uppercase;
-}
-
-
-.before-after__example-item--frame {
-	text-transform: lowercase;
 }

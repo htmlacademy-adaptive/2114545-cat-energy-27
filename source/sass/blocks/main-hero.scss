@@ -1,12 +1,19 @@
 .main-hero {
 	color: #ffffff;
 	font-family: var(--accent-font);
-	position: relative;
 	margin-bottom: 20px;
+
+	@media #{$mobile-only} {
+		position: relative;
+	}
 
 	@media #{$tablet-only} {
 		padding-top: 2px;
 		padding-left: 117px;
+	}
+
+	@media #{$desktop-only} {
+		position: static;
 	}
 }
 
@@ -19,8 +26,20 @@
 		background-color: rgb(104 183 56 / 0.85);
 		z-index: -1;
 	}
-}
 
+	@media #{$desktop-only} {
+		content: "";
+		position: absolute;
+		width: 50%;
+		height: 694px;
+		top: 0;
+		left: 50%;
+		background-color: rgb(104 183 56 / 0.85);
+		background-repeat: no-repeat;
+		background-size: contain;
+		z-index: -1;
+	}
+}
 
 .main-hero::after {
 	@media #{$mobile-only} {
@@ -32,6 +51,18 @@
 		background-repeat: no-repeat;
 		background-position: center;
 		background-size: contain;
+	}
+
+	@media #{$desktop-only} {
+		content: "";
+		display: block;
+		width: 50%;
+		height: 694px;
+		background-image: url("../../img/main-hero-cat.png");
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: contain;
+		z-index: -2;
 	}
 }
 
