@@ -12,16 +12,6 @@
 	}*/
 }
 
-.main-navigation-link {
-	font-family: var(--accent-font);
-	color: #000000;
-	text-decoration: none;
-
-	@media #{$desktop-only} {
-		color: #ffffff;
-	}
-}
-
 .main-navigation__list {
 	margin: 0;
 	padding: 0;
@@ -135,20 +125,28 @@
 	min-height: 0;
 }
 
-.main-navigation__item {
-	@media #{$tablet-only} {
-		&--active {
-			position: absolute;
-		}
+.main-navigation__link {
+	font-family: var(--accent-font);
+	color: #000000;
+	text-decoration: none;
 
-		&::after {
-			content: "";
-			position: absolute;
-			right: 0;
-			bottom: 0;
-			left: 0;
-			height: 2px;
-			background-color: #68b738;
+	@media #{$desktop-only} {
+		color: #ffffff;
+	}
+
+	@media #{$tablet-only} {
+		&[aria-current="page"] {
+			position: relative;
+
+			&::after {
+				content: "";
+				position: absolute;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				height: 2px;
+				background-color: #68b738;
+			}
 		}
 	}
 }

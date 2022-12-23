@@ -46,6 +46,54 @@
 	color: transparent;
 }
 
+.options__item-slim::before {
+	content: "";
+	display: block;
+	background-image: url("../../icons/stack.svg#options-cat-thin");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+
+	@media #{$mobile-only} {
+		width: 50px;
+		height: 53px;
+	}
+
+	@media #{$tablet-only} {
+		width: 200px;
+		height: 211px;
+	}
+
+	@media #{$desktop-only} {
+		width: 100px;
+		height: 106px;
+	}
+}
+
+.options__item-pro::before {
+	content: "";
+	display: block;
+	background-image: url("../../icons/stack.svg#options-cat-powerful");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+
+	@media #{$mobile-only} {
+		width: 67px;
+		height: 53px;
+	}
+
+	@media #{$tablet-only} {
+		width: 268px;
+		height: 200px;
+	}
+
+	@media #{$desktop-only} {
+		width: 134px;
+		height: 100px;
+	}
+}
+
 .options__text {
 	color: #444444;
 	font-family: var(--main-font);
@@ -82,16 +130,16 @@
 		top: -15px;
 	}
 }
-/*Не работает
+
 .options__link::after {
 	@media #{$mobile-only} {
 		content: "";
 		display: block;
-		width: 24px;
+		width: 32px;
 		height: 12px;
-		background-image: url("/source/icons/options-arrow.svg");
+		background-image: url("../../icons/stack.svg#options-arrow");
 		background-repeat: no-repeat;
 		background-position: center;
 		background-size: contain;
 	}
-}*/
+}

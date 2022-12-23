@@ -1,9 +1,9 @@
 <header class="main-header page__centerer">
 	<nav class="main-navigation">
-		<a class="main-header__logo" href="index.html">
+		<a class="main-header__logo" href="index.html" {% if permalink=="index.html" %}aria-current="page" {% endif %}>
 			<img class="main-header__logo-img" src="img/logo-mobile.svg" width="34" height="38" alt="Лого Cat Energy.">
 		</a>
-		<a class="main-header__logo" href="index.html">
+		<a class="main-header__logo" href="index.html" {% if permalink=="index.html" %}aria-current="page" {% endif %}>
 			<img class="main-header__logo-text" src="img/logo-mobile-text.svg" width="101" height="18" alt="Лого Cat Energy.">
 		</a>
 		<div class="main-navigation__group main-navigation__group--closed">
@@ -12,7 +12,7 @@
 				<ul class="main-navigation__list">
 					{% for page in pages %}
 					<li class="main-navigation__item">
-						<a class="main-navigation-link" href="{{page.path}}" {% if permalink==page.path %}aria-current="page" {% endif %}>
+						<a class="main-navigation__link" href="{{page.path}}" {% if permalink==page.path %}aria-current="page" {% endif %}>
 							{{page.name}}
 						</a>
 					</li>

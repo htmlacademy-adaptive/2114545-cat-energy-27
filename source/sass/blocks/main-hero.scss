@@ -21,19 +21,19 @@
 	}
 }
 
-/*не работает
+
 .main-hero::after {
 	@media #{$mobile-only} {
 		content: "";
 		display: block;
 		width: 320px;
 		height: 302px;
-		background-image: url("/source/img/main-hero-cat.png");
+		background-image: url("../../img/main-hero-cat.png");
 		background-repeat: no-repeat;
 		background-position: center;
 		background-size: contain;
 	}
-}*/
+}
 
 .main-hero__slogan {
 	font-weight: 400;

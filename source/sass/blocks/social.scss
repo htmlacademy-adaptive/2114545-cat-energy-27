@@ -2,26 +2,42 @@
 	color: transparent;
 }
 
+.social__list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
 .social__link--icon-vk::before {
 	content: "";
 	display: block;
 	width: 28px;
 	height: 22px;
-	background: url("/source/icons/vkontakte.svg") no-repeat center / contain;
+	background: url("../../icons/stack.svg#vkontakte") no-repeat center / contain;
 }
 
-.social__link--icon-youtube {
+.social__link--icon-youtube::before {
 	content: "";
 	display: block;
 	width: 28px;
 	height: 22px;
-	background: url("/source/icons/youtube.svg") no-repeat center / contain;
+	background: url("../../icons/stack.svg#youtube") no-repeat center / contain;
+
+	@media #{$mobile-only} {
+		padding-right: 24px;
+		padding-left: 24px;
+	}
+
+	@media #{$not-mobile} {
+		padding-right: 26px;
+		padding-left: 26px;
+	}
 }
 
-.social__link--icon-telegram {
+.social__link--icon-telegram::before {
 	content: "";
 	display: block;
 	width: 28px;
 	height: 22px;
-	background: url("/source/icons/telegram.svg") no-repeat center / contain;
+	background: url("../../icons/stack.svg#telegram") no-repeat center / contain;
 }

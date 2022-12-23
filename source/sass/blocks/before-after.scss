@@ -38,23 +38,25 @@
 	}
 }
 
-.before-after__food-costs {
+.before-after__example-value--frame {
+	font-size: 24px;
+	line-height: 24px;
+	border-radius: 3px;
+	border: #cdcdcd solid 1px;
+}
+
+.before-after__example-name--frame {
+	font-size: 12px;
+	line-height: 12px;
+	font-family: var(--main-font);
+	order: 1;
+}
+
+.before-after__example-item {
 	text-transform: uppercase;
+}
 
-	@media #{$mobile-only} {
-		grid-column-start: 1;
-		grid-column-end: 3;
-		display: flex;
-		flex-wrap: wrap;
-		text-transform: uppercase;
-	}
 
-	@media #{$tablet-only} {
-		font-size: 20px;
-		line-height: 20px;
-	}
-
-	@media #{$desktop-only} {
-		display: flex;
-	}
+.before-after__example-item--frame {
+	text-transform: lowercase;
 }
