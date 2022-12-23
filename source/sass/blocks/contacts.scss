@@ -8,9 +8,20 @@
 
 .contacts__title {
 	padding-bottom: 11px;
+	position: relative;
 
 	@media #{$not-mobile} {
 		padding-bottom: 40px;
+	}
+}
+
+.contacts__title::before {
+	@media #{$mobile-only} {
+		content: "";
+		position: absolute;
+		background-color: #d9d9d9;
+		min-width: 320px;
+		height: 1px;
 	}
 }
 
