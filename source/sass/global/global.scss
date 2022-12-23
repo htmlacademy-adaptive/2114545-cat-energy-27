@@ -11,6 +11,25 @@ body {
 
 body {
 	margin: 0;
+
+	@media #{$desktop-only} {
+		position: static;
+	}
+}
+
+body::before {
+	@media #{$desktop-only} {
+		content: "";
+		position: absolute;
+		width: 50%;
+		height: 694px;
+		top: 0;
+		left: 50%;
+		background-color: rgb(104 183 56 / 0.85);
+		background-repeat: no-repeat;
+		background-size: contain;
+		z-index: -1;
+	}
 }
 
 footer {

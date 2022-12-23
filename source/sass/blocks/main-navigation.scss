@@ -16,6 +16,10 @@
 	font-family: var(--accent-font);
 	color: #000000;
 	text-decoration: none;
+
+	@media #{$desktop-only} {
+		color: #ffffff;
+	}
 }
 
 .main-navigation__list {
