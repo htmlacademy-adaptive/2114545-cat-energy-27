@@ -26,6 +26,7 @@
 	padding: 0;
 	margin: 0;
 	gap: 20px;
+	counter-reset: none;
 
 	@media #{$not-mobile} {
 		grid-template-columns: repeat(2, 1fr);
@@ -44,6 +45,7 @@
 	color: #444444;
 	font-family: var(--main-font);
 	display: grid;
+	counter-increment: 1;
 
 	@media #{$mobile-only} {
 		grid-template-columns: 1fr 1fr;
@@ -57,7 +59,7 @@
 .product-description__item--leaf::before {
 	content: "";
 	display: block;
-	background-image: url("../../icons/stack.svg#product-description-leaf");
+	background-image: url("../../icons/stack.svg#leaf");
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: contain;
@@ -70,26 +72,13 @@
 	@media #{$not-mobile} {
 		width: 80px;
 		height: 80px;
-	}
-}
-
-.product-description__item--leaf::after {
-	@media #{$not-mobile} {
-		content: "";
-		display: block;
-		background-image: url("../../icons/stack.svg#product-description-number-one");
-		background-repeat: no-repeat;
-		background-position: center;
-		background-size: contain;
-		width: 112px;
-		height: 280px;
 	}
 }
 
 .product-description__item--boiling-water::before {
 	content: "";
 	display: block;
-	background-image: url("../../icons/stack.svg#product-description-boiling-water");
+	background-image: url("../../icons/stack.svg#boiling-water");
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: contain;
@@ -102,26 +91,13 @@
 	@media #{$not-mobile} {
 		width: 80px;
 		height: 80px;
-	}
-}
-
-.product-description__item--boiling-water::after {
-	@media #{$not-mobile} {
-		content: "";
-		display: block;
-		background-image: url("../../icons/stack.svg#product-description-number-two");
-		background-repeat: no-repeat;
-		background-position: center;
-		background-size: contain;
-		width: 134px;
-		height: 280px;
 	}
 }
 
 .product-description__item--fork-spoon::before {
 	content: "";
 	display: block;
-	background-image: url("../../icons/stack.svg#product-description-fork-spoon");
+	background-image: url("../../icons/stack.svg#fork-spoon");
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: contain;
@@ -134,26 +110,13 @@
 	@media #{$not-mobile} {
 		width: 80px;
 		height: 80px;
-	}
-}
-
-.product-description__item--fork-spoon::after {
-	@media #{$not-mobile} {
-		content: "";
-		display: block;
-		background-image: url("../../icons/stack.svg#product-description-number-three");
-		background-repeat: no-repeat;
-		background-position: center;
-		background-size: contain;
-		width: 134px;
-		height: 280px;
 	}
 }
 
 .product-description__item--clock::before {
 	content: "";
 	display: block;
-	background-image: url("../../icons/stack.svg#product-description-clock");
+	background-image: url("../../icons/stack.svg#clock");
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: contain;
@@ -166,18 +129,5 @@
 	@media #{$not-mobile} {
 		width: 80px;
 		height: 80px;
-	}
-}
-
-.product-description__item--clock::after {
-	@media #{$not-mobile} {
-		content: "";
-		display: block;
-		background-image: url("../../icons/stack.svg#product-description-number-four");
-		background-repeat: no-repeat;
-		background-position: center;
-		background-size: contain;
-		width: 136px;
-		height: 280px;
 	}
 }

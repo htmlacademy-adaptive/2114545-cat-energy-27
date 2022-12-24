@@ -1,6 +1,9 @@
 .main-footer {
+	position: sticky;
+	top: 100vh;
 	background-color: #f2f2f2;
 }
+
 
 .main-footer__wrapper {
 	display: grid;

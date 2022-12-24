@@ -13,57 +13,44 @@
 	}
 
 	@media #{$desktop-only} {
+		--cat-position: right 0px;
 		position: static;
 	}
-}
 
-.main-hero::before {
-	@media #{$mobile-only} {
+	&::before {
 		content: "";
 		position: absolute;
 		width: 100%;
 		height: 302px;
-		background-color: rgb(104 183 56 / 0.85);
+		background:
+			linear-gradient(
+				rgb(104 183 56 / 0.85),
+				rgb(104 183 56 / 0.85)
+			),
+			url("../../img/main-hero-cat.png") no-repeat var(--cat-position, center) / contain,
+			linear-gradient(
+				to right,
+				#54555a 50%,
+				#434248 50%
+			);
 		z-index: -1;
-	}
 
-	@media #{$desktop-only} {
-		content: "";
-		position: absolute;
-		width: 50%;
-		height: 694px;
-		top: 0;
-		left: 50%;
-		background-color: rgb(104 183 56 / 0.85);
-		background-repeat: no-repeat;
-		background-size: contain;
-		z-index: -1;
+		@media #{$tablet-only} {
+			content: none;
+		}
+
+		@media #{$desktop-only} {
+			height: 694px;
+			top: 0;
+			left: 50%;
+			right: 0;
+			z-index: -1;
+		}
 	}
 }
 
-.main-hero::after {
-	@media #{$mobile-only} {
-		content: "";
-		display: block;
-		width: 320px;
-		height: 302px;
-		background-image: url("../../img/main-hero-cat.png");
-		background-repeat: no-repeat;
-		background-position: center;
-		background-size: contain;
-	}
-
-	@media #{$desktop-only} {
-		content: "";
-		display: block;
-		width: 50%;
-		height: 694px;
-		background-image: url("../../img/main-hero-cat.png");
-		background-repeat: no-repeat;
-		background-position: center;
-		background-size: contain;
-		z-index: -2;
-	}
+.main-hero__container {
+	display: grid;
 }
 
 .main-hero__slogan {
@@ -103,17 +90,5 @@
 		padding: 7px 44px 7px 44px;
 		margin-right: 20px;
 		margin-left: 20px;
-	}
-
-	@media #{$tablet-only} {
-		padding: 14px 26px 14px 26px;
-		font-size: 20px;
-		line-height: 20px;
-	}
-
-	@media #{$desktop-only} {
-		padding: 14px 26px 14px 26px;
-		font-size: 20px;
-		line-height: 20px;
 	}
 }

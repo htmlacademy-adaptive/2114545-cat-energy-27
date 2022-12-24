@@ -1,0 +1,20 @@
+.logo {
+	text-decoration: none;
+
+	@media #{$mobile-only} {
+		display: grid;
+		grid-template-columns: 1fr auto 1fr;
+	}
+
+	&::after {
+		content: "";
+	}
+}
+
+/*.logo__image {
+
+}
+
+.logo__text {
+
+}*/
