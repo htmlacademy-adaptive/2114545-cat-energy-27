@@ -4,8 +4,29 @@
 	line-height: 20px;
 	font-weight: 500;
 	text-transform: uppercase;
+
+	@media #{$tablet-only} {
+		display: flex;
+	}
+
+	@media #{$desktop-only} {
+		display: flex;
+	}
 }
 
 .main-header__logo {
 	display: block;
+
+	@media #{$mobile-only} {
+		padding-top: 10px;
+		padding-right: 20px;
+		padding-bottom: 17px;
+		padding-left: 20px;
+	}
+
+	@media #{$tablet-only} {
+		padding-top: 24px;
+		padding-bottom: 64px;
+		padding-right: 94px;
+	}
 }

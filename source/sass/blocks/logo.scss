@@ -4,6 +4,7 @@
 	@media #{$mobile-only} {
 		display: grid;
 		grid-template-columns: 1fr auto 1fr;
+		align-items: center;
 	}
 
 	&::after {

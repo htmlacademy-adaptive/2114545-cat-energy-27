@@ -30,6 +30,10 @@
 			--link-decor-color: currentColor;
 		}
 	}
+
+	@media #{$tablet-only} {
+		align-items: center;
+	}
 }
 
 .main-navigation__toggle {
