@@ -26,6 +26,7 @@
 		padding-right: 33px;
 		padding-bottom: 37px;
 		padding-left: 52px;
+		display: grid;
 	}
 
 	@media #{$tablet-only} {
@@ -114,10 +115,18 @@
 	font-family: var(--accent-font);
 	color: #000000;
 	text-decoration: none;
-	font-size: 16px;
-	line-height: 16px;
 	text-transform: uppercase;
 	position: relative;
+
+	@media #{$mobile-only} {
+		font-size: 16px;
+		line-height: 16px;
+	}
+
+	@media #{$tablet-only} {
+		font-size: 20px;
+		line-height: 30px;
+	}
 
 	&:focus-visible {
 		outline: 2px solid currentColor;
@@ -139,12 +148,12 @@
 		text-transform: uppercase;
 		text-decoration: none;
 
-		@media (min-width: 768px) {
+		@media #{$tablet-only} {
 			font-size: 20px;
 			gap: 25px;
 		}
 
-		@media (min-width: 1280px) {
+		@media #{$desktop-only} {
 			gap: 28px;
 		}
 	}

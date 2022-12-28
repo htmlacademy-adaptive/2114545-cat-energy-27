@@ -26,13 +26,13 @@
 	padding: 0;
 	margin: 0;
 	gap: 20px;
-	counter-reset: none;
 
 	@media #{$not-mobile} {
 		grid-template-columns: repeat(2, 1fr);
 		row-gap: 37px;
 		column-gap: 153px;
 		padding-bottom: 104px;
+		counter-reset: listCounter;
 	}
 
 	@media #{$desktop-only} {
@@ -45,10 +45,14 @@
 	color: #444444;
 	font-family: var(--main-font);
 	display: grid;
-	counter-increment: 1;
 
 	@media #{$mobile-only} {
-		grid-template-columns: 1fr 1fr;
+		grid-template-columns: auto 1fr;
+		column-gap: 20px;
+	}
+
+	@media #{$not-mobile} {
+		counter-increment: listCounter;
 	}
 }
 
@@ -72,6 +76,7 @@
 	@media #{$not-mobile} {
 		width: 80px;
 		height: 80px;
+		content: counters(listCounter, ".", upper-roman) ") ";
 	}
 }
 
