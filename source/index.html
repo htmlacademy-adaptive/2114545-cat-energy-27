@@ -12,19 +12,7 @@
 				<a class="main-hero__link" href="form.html">Подобрать программу</a>
 			</div>
 
-			<picture>
-				<source type="image/avif" media="(min-width: 1200px)" srcset="img/feed-desktop@1x.avif 1x, img/feed-desktop@2x.avif 2x" width="552" height="499">
-				<source type="image/avif" media="(min-width: 768px)" srcset="img/feed-tablet@1x.avif 1x, img/feed-tablet@2x.avif 2x" width="709" height="609">
-				<source type="image/avif" srcset="img/feed-mobile@1x.avif 1x, img/feed-mobile@2x.avif 2x" width="280" height="270">
-
-				<source type="image/webp" media="(min-width: 1200px)" srcset="img/feed-desktop@1x.webp 1x, img/feed-desktop@2x.webp 2x" width="552" height="499">
-				<source type="image/webp" media="(min-width: 768px)" srcset="img/feed-tablet@1x.webp 1x, img/feed-tablet@2x.webp 2x" width="709" height="609">
-				<source type="image/webp" srcset="img/feed-mobile@1x.webp 1x, img/feed-mobile@2x.webp 2x" width="280" height="270">
-
-				<source media="(min-width: 1200px)" srcset=" img/feed-desktop@1x.png 1x, img/feed-desktop@2x.png 2x" width="552" height="499">
-				<source media="(min-width: 768px)" srcset="img/feed-tablet@1x.png 1x, img/feed-tablet@2x.png 2x" width="709" height="609">
-				<img class="main-hero__image" src="img/feed-mobile@1x.png" srcset="img/feed-mobile@2x.png 2x" width="280" height="270" alt="Упаковка продукции со вкусом курицы.">
-			</picture>
+			{% include "./templates/picture.twig" with {name: "feed", class: "main-hero__image", alt: "Упаковка продукции со вкусом курицы."} %}
 
 		</div>
 	</section>

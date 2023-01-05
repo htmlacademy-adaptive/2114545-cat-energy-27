@@ -41,24 +41,171 @@
 				}
 			]
 		},
-		"test": {
+		"feed": {
 			"ext": "png",
 			"maxdppx": 2,
 			"sizes": [
 				{
 					"viewport": "desktop",
-					"width": 1280,
-					"height": 1280
+					"width": 552,
+					"height": 499
 				},
 				{
 					"viewport": "tablet",
-					"width": 640,
-					"height": 640
+					"width": 708,
+					"height": 609
 				},
 				{
 					"viewport": "mobile",
-					"width": 320,
-					"height": 320
+					"width": 280,
+					"height": 270
+				}
+			]
+		},
+		"chicken500": {
+			"ext": "png",
+			"maxdppx": 2,
+			"sizes": [
+				{
+					"viewport": "desktop",
+					"width": 161,
+					"height": 172
+				},
+				{
+					"viewport": "tablet",
+					"width": 161,
+					"height": 172
+				},
+				{
+					"viewport": "mobile",
+					"width": 68,
+					"height": 86
+				}
+			]
+		},
+		"chicken1000": {
+			"ext": "png",
+			"maxdppx": 2,
+			"sizes": [
+				{
+					"viewport": "desktop",
+					"width": 172,
+					"height": 196
+				},
+				{
+					"viewport": "tablet",
+					"width": 168,
+					"height": 206
+				},
+				{
+					"viewport": "mobile",
+					"width": 84,
+					"height": 100
+				}
+			]
+		},
+		"fish500": {
+			"ext": "png",
+			"maxdppx": 2,
+			"sizes": [
+				{
+					"viewport": "desktop",
+					"width": 163,
+					"height": 174
+				},
+				{
+					"viewport": "tablet",
+					"width": 163,
+					"height": 174
+				},
+				{
+					"viewport": "mobile",
+					"width": 68,
+					"height": 78
+				}
+			]
+		},
+		"fish1000": {
+			"ext": "png",
+			"maxdppx": 2,
+			"sizes": [
+				{
+					"viewport": "desktop",
+					"width": 172,
+					"height": 196
+				},
+				{
+					"viewport": "tablet",
+					"width": 168,
+					"height": 200
+				},
+				{
+					"viewport": "mobile",
+					"width": 84,
+					"height": 100
+				}
+			]
+		},
+		"buckwheat500": {
+			"ext": "png",
+			"maxdppx": 2,
+			"sizes": [
+				{
+					"viewport": "desktop",
+					"width": 161,
+					"height": 171
+				},
+				{
+					"viewport": "tablet",
+					"width": 161,
+					"height": 171
+				},
+				{
+					"viewport": "mobile",
+					"width": 68,
+					"height": 78
+				}
+			]
+		},
+		"buckwheat1000": {
+			"ext": "png",
+			"maxdppx": 2,
+			"sizes": [
+				{
+					"viewport": "desktop",
+					"width": 172,
+					"height": 196
+				},
+				{
+					"viewport": "tablet",
+					"width": 168,
+					"height": 200
+				},
+				{
+					"viewport": "mobile",
+					"width": 84,
+					"height": 100
+				}
+			]
+		},
+		"rice500": {
+			"ext": "png",
+			"maxdppx": 2,
+			"sizes": [
+				{
+					"viewport": "desktop",
+					"width": 163,
+					"height": 174
+				},
+				{
+					"viewport": "tablet",
+					"width": 163,
+					"height": 174
+				},
+				{
+					"viewport": "mobile",
+					"width": 72,
+					"height": 84
 				}
 			]
 		}
