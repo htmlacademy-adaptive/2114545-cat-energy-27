@@ -1,4 +1,23 @@
 .gifts {
 	background-color: rgb(104 183 56 / 0.85);
 	color: #ffffff;
+
+	&::before {
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 302px;
+		background:
+			linear-gradient(
+				rgb(104 183 56 / 0.85),
+				rgb(104 183 56 / 0.85)
+			),
+			url("../../img/main-hero-cat.png") no-repeat var(--cat-position, center) / contain,
+			linear-gradient(
+				to right,
+				#54555a 50%,
+				#434248 50%
+			);
+		z-index: -1;
+	}
 }

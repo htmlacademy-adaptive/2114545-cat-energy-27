@@ -17,6 +17,8 @@
 		position: static;
 	}
 
+	@include bg-image("herocat");
+
 	&::before {
 		content: "";
 		position: absolute;
@@ -27,7 +29,7 @@
 				rgb(104 183 56 / 0.85),
 				rgb(104 183 56 / 0.85)
 			),
-			url("../../img/main-hero-cat.png") no-repeat var(--cat-position, center) / contain,
+			var(--bg-image) no-repeat var(--cat-position, center) / contain,
 			linear-gradient(
 				to right,
 				#54555a 50%,
