@@ -224,6 +224,27 @@
 					"height": 302
 				}
 			]
+		},
+		"giftcat": {
+			"ext": "png",
+			"maxdppx": 2,
+			"sizes": [
+				{
+					"viewport": "desktop",
+					"width": 246,
+					"height": 289
+				},
+				{
+					"viewport": "tablet",
+					"width": 707,
+					"height": 200
+				},
+				{
+					"viewport": "mobile",
+					"width": 279,
+					"height": 289
+				}
+			]
 		}
 	}
 }

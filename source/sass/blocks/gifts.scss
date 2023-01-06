@@ -1,6 +1,7 @@
 .gifts {
-	background-color: rgb(104 183 56 / 0.85);
 	color: #ffffff;
+
+	@include bg-image("giftcat");
 
 	&::before {
 		content: "";
@@ -12,12 +13,7 @@
 				rgb(104 183 56 / 0.85),
 				rgb(104 183 56 / 0.85)
 			),
-			url("../../img/main-hero-cat.png") no-repeat var(--cat-position, center) / contain,
-			linear-gradient(
-				to right,
-				#54555a 50%,
-				#434248 50%
-			);
+			var(--bg-image) no-repeat var(--cat-position, center) / contain,;
 		z-index: -1;
 	}
 }
