@@ -1,7 +1,11 @@
 <header class="main-header page__centerer">
 	<a class="main-header__logo logo" href="index.html" {% if permalink=="index.html" %}aria-current="page" {% endif %}>
-		<img class="logo__image" src="img/logo-mobile.svg" width="34" height="38" alt="Лого Cat Energy.">
-		<img class="logo__text" src="img/logo-mobile-text.svg" width="101" height="18" alt="Лого Cat Energy.">
+		<svg class="logo__image" width="34" height="38">
+			<use xlink:href="#picture-logo"></use>
+		</svg>
+		<svg class="logo__text" width="101" height="18">
+			<use xlink:href="#text-logo"></use>
+		</svg>
 	</a>
 	<nav class="main-navigation">
 		<button class="main-navigation__toggle" type="button">
