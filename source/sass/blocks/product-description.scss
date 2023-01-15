@@ -67,6 +67,7 @@
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: contain;
+	background-color: #68b738;
 
 	@media #{$mobile-only} {
 		width: 60px;
@@ -83,10 +84,11 @@
 .product-description__item--boiling-water::before {
 	content: "";
 	display: block;
-	background-image: url("../../icons/stack.svg#boiling_water");
+	background-image: url("../../icons/stack.svg#stewpot");
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: contain;
+	background-color: #68b738;
 
 	@media #{$mobile-only} {
 		width: 60px;
@@ -102,10 +104,11 @@
 .product-description__item--fork-spoon::before {
 	content: "";
 	display: block;
-	background-image: url("../../icons/stack.svg#spoon_fork");
+	background-image: url("../../icons/stack.svg#cutlery");
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: contain;
+	background-color: #68b738;
 
 	@media #{$mobile-only} {
 		width: 60px;
@@ -125,6 +128,7 @@
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: contain;
+	background-color: #68b738;
 
 	@media #{$mobile-only} {
 		width: 60px;

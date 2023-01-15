@@ -10,6 +10,40 @@
 	&::after {
 		content: "";
 	}
+
+	@media #{$tablet-only} {
+		margin-right: 94px;
+	}
+
+	@media #{$desktop-only} {
+		margin-right: 538px;
+	}
+}
+
+.logo__image {
+	display: block;
+
+	@media #{$mobile-only} {
+		padding-top: 10px;
+		padding-right: 56px;
+		padding-bottom: 17px;
+	}
+
+	@media #{$tablet-only} {
+		padding-top: 24px;
+		padding-bottom: 64px;
+		padding-right: 94px;
+	}
+}
+
+.logo__text {
+	--fill: #111111;
+	display: block;
+
+	@media #{$mobile-only} {
+		padding-top: 23px;
+		padding-bottom: 24px;
+	}
 }
 
 .logo__text:hover {

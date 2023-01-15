@@ -50,10 +50,12 @@
 .options__item-slim::before {
 	content: "";
 	display: block;
-	background-image: url("../../icons/stack.svg#cat_slim");
+	background-image: url("../../icons/stack.svg#cat-slim");
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: contain;
+	background-color: #68b738;
+	border-radius: 50%;
 
 	@media #{$mobile-only} {
 		width: 50px;
@@ -74,10 +76,12 @@
 .options__item-pro::before {
 	content: "";
 	display: block;
-	background-image: url("../../icons/stack.svg#cat_pro");
+	background-image: url("../../icons/stack.svg#cat-pro");
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: contain;
+	background-color: #68b738;
+	border-radius: 50%;
 
 	@media #{$mobile-only} {
 		width: 67px;
@@ -94,6 +98,7 @@
 		height: 100px;
 	}
 }
+
 
 .options__text {
 	color: #444444;

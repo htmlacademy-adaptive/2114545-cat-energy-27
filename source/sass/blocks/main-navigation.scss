@@ -17,7 +17,7 @@
 	}
 
 	&--closed {
-		--toggle-icon: url("../../icons/stack.svg#toggle");
+		--toggle-icon: url("../../icons/stack.svg#burger");
 
 		@media #{$mobile-only} {
 			--nav-visibility: collapse;
@@ -33,6 +33,7 @@
 
 	@media #{$tablet-only} {
 		align-items: center;
+		justify-content: flex-end;
 	}
 }
 
@@ -130,7 +131,7 @@
 	text-transform: uppercase;
 	color: var(--link-color, #000000);
 	text-decoration: none;
-	text-shadow: 0 0 10px #000000;
+
 
 	@media #{$mobile-only} {
 		width: 100%;
@@ -138,19 +139,43 @@
 	}
 
 	@media #{$not-mobile} {
+		font-weight: 400;
+
 		&[aria-current="page"] {
 			--has-link-decor: "";
 			position: relative;
 		}
 	}
 
-	&::after {
-		content: var(--has-link-decor, none);
-		position: absolute;
-		right: 0;
-		bottom: 0;
-		left: 0;
-		height: 2px;
-		background-color: var(--link-decor-color, #68b738);
+	@media #{$tablet-only} {
+		font-size: 18px;
+		line-height: 24px;
+
+		&::after {
+			content: var(--has-link-decor, none);
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			height: 2px;
+			background-color: var(--link-decor-color, #68b738);
+		}
+	}
+
+	@media #{$desktop-only} {
+		font-size: 20px;
+		line-height: 30px;
+		color: #ffffff;
+		padding-top: 69px;
+
+		&::after {
+			content: var(--has-link-decor, none);
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			height: 2px;
+			background-color: var(--link-decor-color, #ffffff);
+		}
 	}
 }
