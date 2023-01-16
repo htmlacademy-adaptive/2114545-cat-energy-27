@@ -94,14 +94,13 @@
 	display: inline-block;
 	text-align: center;
 	background-color: #68b738;
+	text-transform: uppercase;
 
 	@media #{$mobile-only} {
 		display: block;
 		font-size: 14px;
 		line-height: 18px;
-		padding: 7px 44px 7px 44px;
-		margin-right: 20px;
-		margin-left: 20px;
+		padding: 8px 44px 8px 44px;
 		grid-row: 4/5;
 	}
 
@@ -121,4 +120,9 @@
 
 .main-hero__link:hover {
 	background-color: #5eaa2f;
+}
+
+.main-hero__link:active {
+	background-color: #5eaa2f;
+	color: rgba(255 255 255 0.3);
 }
