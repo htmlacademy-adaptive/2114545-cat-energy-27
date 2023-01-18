@@ -13,10 +13,14 @@
 
 	@media #{$tablet-only} {
 		margin-right: 94px;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
 	}
 
 	@media #{$desktop-only} {
-		margin-right: 538px;
+
+		display: grid;
+		grid-template-columns: 1fr 1fr;
 	}
 }
 
@@ -28,12 +32,6 @@
 		padding-right: 56px;
 		padding-bottom: 17px;
 	}
-
-	@media #{$tablet-only} {
-		padding-top: 24px;
-		padding-bottom: 64px;
-		padding-right: 94px;
-	}
 }
 
 .logo__text {
@@ -44,8 +42,16 @@
 		padding-top: 23px;
 		padding-bottom: 24px;
 	}
+
+	@media #{$tablet-only} {
+		padding-top: 19px;
+	}
 }
 
 .logo__text:hover {
-	--fill: #a35cc4;
+	opacity: 80%;
+}
+
+.logo__text:active {
+	opacity: 60%;
 }

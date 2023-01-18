@@ -132,7 +132,6 @@
 	color: var(--link-color, #000000);
 	text-decoration: none;
 
-
 	@media #{$mobile-only} {
 		width: 100%;
 		padding: 23px;
@@ -152,12 +151,6 @@
 		line-height: 24px;
 
 		&::after {
-			content: var(--has-link-decor, none);
-			position: absolute;
-			right: 0;
-			bottom: 0;
-			left: 0;
-			height: 2px;
 			background-color: var(--link-decor-color, #68b738);
 		}
 	}
@@ -166,16 +159,18 @@
 		font-size: 20px;
 		line-height: 30px;
 		color: #ffffff;
-		padding-top: 69px;
 
 		&::after {
-			content: var(--has-link-decor, none);
-			position: absolute;
-			right: 0;
-			bottom: 0;
-			left: 0;
-			height: 2px;
 			background-color: var(--link-decor-color, #ffffff);
 		}
+	}
+
+	&::after {
+		content: var(--has-link-decor, none);
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		height: 2px;
 	}
 }

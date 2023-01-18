@@ -1,5 +1,4 @@
 .product-description {
-	background-color: #ffffff;
 	color: #000000;
 
 	@media #{$mobile-only} {
@@ -52,91 +51,50 @@
 	}
 
 	@media #{$not-mobile} {
+		--icon-size: 80px;
+		position: relative;
 		counter-increment: listCounter;
 	}
-}
 
-.product-description__item::marker {
-	color: transparent;
-}
-
-.product-description__item--leaf::before {
-	content: "";
-	display: block;
-	background-image: url("../../icons/stack.svg#leaf");
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: contain;
-	background-color: #68b738;
-
-	@media #{$mobile-only} {
-		width: 60px;
-		height: 60px;
+	&--leaf {
+		--icon: url("../../icons/stack.svg#leaf");
 	}
 
-	@media #{$not-mobile} {
-		width: 80px;
-		height: 80px;
-		content: counters(listCounter, ".", upper-roman) ") ";
-	}
-}
-
-.product-description__item--boiling-water::before {
-	content: "";
-	display: block;
-	background-image: url("../../icons/stack.svg#stewpot");
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: contain;
-	background-color: #68b738;
-
-	@media #{$mobile-only} {
-		width: 60px;
-		height: 60px;
+	&--boiling-water {
+		--icon: url("../../icons/stack.svg#stewpot");
 	}
 
-	@media #{$not-mobile} {
-		width: 80px;
-		height: 80px;
-	}
-}
-
-.product-description__item--fork-spoon::before {
-	content: "";
-	display: block;
-	background-image: url("../../icons/stack.svg#cutlery");
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: contain;
-	background-color: #68b738;
-
-	@media #{$mobile-only} {
-		width: 60px;
-		height: 60px;
+	&--fork-spoon {
+		--icon: url("../../icons/stack.svg#cutlery");
 	}
 
-	@media #{$not-mobile} {
-		width: 80px;
-		height: 80px;
-	}
-}
-
-.product-description__item--clock::before {
-	content: "";
-	display: block;
-	background-image: url("../../icons/stack.svg#clock");
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: contain;
-	background-color: #68b738;
-
-	@media #{$mobile-only} {
-		width: 60px;
-		height: 60px;
+	&--clock {
+		--icon: url("../../icons/stack.svg#clock");
 	}
 
-	@media #{$not-mobile} {
-		width: 80px;
-		height: 80px;
+	&::before {
+		content: "";
+		display: block;
+		width: var(--icon-size, 60px);
+		height: var(--icon-size, 60px);
+		background: #68b738 var(--icon) no-repeat center / 32px;
+	}
+
+	&::after {
+		position: absolute;
+		z-index: -1;
+		right: 0;
+		font-family: var(--accent-font);
+		font-size: 280px;
+		line-height: 1;
+		color: #f2f2f2;
+
+		@media #{$not-mobile} {
+			content: counter(listCounter);
+		}
+	}
+
+	&::marker {
+		color: transparent;
 	}
 }

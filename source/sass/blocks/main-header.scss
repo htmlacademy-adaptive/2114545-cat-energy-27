@@ -7,9 +7,12 @@
 
 	@media #{$tablet-only} {
 		display: flex;
+		flex-wrap: wrap;
 	}
 
 	@media #{$desktop-only} {
 		display: flex;
+		flex-wrap: wrap;
+		padding-top: 53px;
 	}
 }

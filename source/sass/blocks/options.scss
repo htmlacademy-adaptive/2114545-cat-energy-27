@@ -6,10 +6,12 @@
 	display: grid;
 	padding: 0;
 	margin: 0;
-	gap: 20px;
+	row-gap: 20px;
+	column-gap: 80px;
 
 	@media #{$not-mobile} {
-		gap: 30px;
+		grid-template-columns: repeat(auto-fill, minmax(570px, 1fr));
+		row-gap: 30px;
 	}
 
 	@media #{$desktop-only} {
@@ -19,95 +21,63 @@
 }
 
 .options__item {
-	background-color: #f2f2f2;
+	display: flow-root;
+	padding: 20px;
+	background-color: hsl(0 0% 95%);
 
-	@media #{$mobile-only} {
-		padding-right: 33px;
-		padding-bottom: 37px;
-		padding-left: 20px;
-		display: grid;
+	@media #{$not-mobile} {
+		padding: 52px;
 	}
 
-	@media #{$tablet-only} {
-		padding-top: 6px;
-		padding-right: 33px;
-		padding-bottom: 22px;
-		padding-left: 20px;
+	&--icon_slim {
+		--icon: url("../../icons/stack.svg#cat-slim");
 	}
 
-	@media #{$desktop-only} {
-		padding-top: 41px;
-		padding-bottom: 55px;
-		padding-left: 52px;
+	&--icon_pro {
+		--icon: url("../../icons/stack.svg#cat-pro");
+	}
+
+	&--has_icon {
+		--has-icon: "";
+		--circle-radius: calc(100% * 100 / 280);
+		--circle-color: var(--accent-color);
+		--icon-position: left;
+		--icon-size: 70px;
+		--icon-margin: -6px 9px 12px -8px;
+
+		@media #{$tablet-only} {
+			--icon-position: right;
+		}
+
+		@media #{$not-mobile} {
+			--icon-size: 280px;
+			--icon-margin: 0 -30px -10px 12px;
+		}
+
+		@media #{$desktop-only} {
+			--icon-size: 140px;
+			--icon-margin: -25px 42px 19px -20px;
+		}
+	}
+
+	&::before {
+		content: var(--has-icon, none);
+		display: block;
+		float: var(--icon-position);
+		block-size: var(--icon-size);
+		inline-size: var(--icon-size);
+		margin: var(--icon-margin);
+		background-image:
+			var(--icon, var(--icon-a)),
+			radial-gradient(
+				var(--circle-color) calc(var(--circle-radius) - 0.5px),
+				transparent calc(var(--circle-radius) + 0.5px));
 	}
 }
 
 .options__item::marker {
 	color: transparent;
 }
-
-.options__title--slim {
-	display: flex;
-}
-
-.options__title--slim::before {
-	content: "";
-	display: block;
-	background-image: url("../../icons/stack.svg#cat-slim");
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: contain;
-	margin-right: 19px;
-	background-color: #68b738;
-	border-radius: 50%;
-
-	@media #{$mobile-only} {
-		width: 50px;
-		height: 53px;
-	}
-
-	@media #{$tablet-only} {
-		width: 200px;
-		height: 211px;
-	}
-
-	@media #{$desktop-only} {
-		width: 100px;
-		height: 106px;
-	}
-}
-
-.options__title--pro {
-	display: flex;
-}
-
-.options__title--pro::before {
-	content: "";
-	display: block;
-	background-image: url("../../icons/stack.svg#cat-pro");
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: contain;
-	margin-right: 11px;
-	background-color: #68b738;
-	border-radius: 50%;
-
-	@media #{$mobile-only} {
-		width: 67px;
-		height: 53px;
-	}
-
-	@media #{$tablet-only} {
-		width: 268px;
-		height: 200px;
-	}
-
-	@media #{$desktop-only} {
-		width: 134px;
-		height: 100px;
-	}
-}
-
 
 .options__text {
 	color: #444444;
