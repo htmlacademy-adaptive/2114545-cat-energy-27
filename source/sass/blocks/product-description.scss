@@ -78,6 +78,7 @@
 		width: var(--icon-size, 60px);
 		height: var(--icon-size, 60px);
 		background: #68b738 var(--icon) no-repeat center / 32px;
+		align-self: center;
 	}
 
 	&::after {

@@ -32,3 +32,8 @@
 		width: 1220px;
 	}
 }
+
+.page__hidden {
+	position: fixed;
+	transform: scale(0);
+}

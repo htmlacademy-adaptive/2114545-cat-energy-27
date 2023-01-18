@@ -1,23 +1,31 @@
 .before-after {
 	color: #000000;
 	position: relative;
+	display: grid;
+	gap: 20px;
+	padding: 100px 0;
 
-	@media #{$mobile-only} {
-		background-color: #eaeaea;
-		padding-top: 25px;
-		padding-bottom: 40px;
+	@media (min-width: 768px) {
+		--bg-top-shift: calc(100% - 462px);
+		gap: 100px;
 	}
-}
 
-.before-after::before {
-	@media #{$tablet-only} {
+	@media (min-width: 1280px) {
+		--bg-top-shift: 236px;
+		grid-template-columns: auto 560px;
+		gap: 224px;
+	}
+
+	&::before {
 		content: "";
 		position: absolute;
-		background-color: #eaeaea;
-		width: 100%;
-		height: 462px;
 		z-index: -1;
-		/*top: 516px;*/
+		right: 0;
+		bottom: 0;
+		top: var(--bg-top-shift, 0);
+		width: 100vw;
+		background-color: hsl(0 0% 92%);
+		box-shadow: 100vw 0 0 0 hsl(0 0% 92%);
 	}
 }
 
@@ -31,6 +39,89 @@
 	line-height: 18px;
 	color: #444444;
 	font-family: var(--main-font);
+}
+
+.proof__compare {
+	margin: 0;
+	align-self: start;
+	justify-self: center;
+}
+
+.compare__wrapper {
+	margin: 0 auto;
+}
+
+.compare__description {
+	text-align: center;
+}
+
+.compare__image {
+	display: block;
+}
+
+.slider {
+	display: grid;
+	grid-template-columns: calc(var(--curtain-place) * 100%) auto calc((1 - var(--curtain-place)) * 100%);
+	width: min(100%, 560px);
+	aspect-ratio: 280/256;
+}
+
+.slider__image {
+	display: block;
+	height: 100%;
+	object-fit: cover;
+
+	&--state_before {
+		object-position: left;
+	}
+
+	&--state_after {
+		object-position: right;
+	}
+}
+
+.slider__curtain {
+	z-index: 1;
+	display: grid;
+	place-items: center;
+	margin: 0 -2px;
+	width: 4px;
+	height: 100%;
+	border-radius: 2px;
+	color: var(--curtain-color, #666666);
+	background-color: currentColor;
+	cursor: col-resize;
+	transition: color 0.2s, opacity 0.2s;
+
+	&:hover {
+		--curtain-color: #68b738;
+	}
+
+	&:active {
+		opacity: 0.6;
+	}
+}
+
+.slider__thumb {
+	box-sizing: border-box;
+	display: grid;
+	margin: -18px;
+	padding: 0;
+	width: 40px;
+	height: 40px;
+	color: inherit;
+	border: 2px solid currentColor;
+	border-radius: 20px;
+	background-color: #ffffff;
+	cursor: col-resize;
+
+	&::before {
+		content: "";
+		width: 100%;
+		height: 100%;
+		background-color: currentColor;
+		mask-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'><path d='m16 11-8 9 8 9V11Zm16 9-8-9v18l8-9Z'/></svg>");
+	}
 }
 
 .before-after__example-list {
