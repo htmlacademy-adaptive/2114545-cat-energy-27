@@ -44,6 +44,7 @@
 	color: #444444;
 	font-family: var(--main-font);
 	display: grid;
+	padding-bottom: 37px;
 
 	@media #{$mobile-only} {
 		grid-template-columns: auto 1fr;
@@ -92,6 +93,11 @@
 
 		@media #{$not-mobile} {
 			content: counter(listCounter);
+		}
+
+		@media #{$tablet-only} {
+			top: -32px;
+			left: 149px;
 		}
 	}
 

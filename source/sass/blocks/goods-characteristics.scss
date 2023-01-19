@@ -1,4 +1,7 @@
 .goods-characteristics__list {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr;
 	color: #444444;
 	font-size: 12px;
 	line-height: 16px;

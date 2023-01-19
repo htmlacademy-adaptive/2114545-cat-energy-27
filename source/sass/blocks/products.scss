@@ -23,6 +23,19 @@
 	@media #{$mobile-only} {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
+		--has-border: "";
+		position: relative;
+	}
+
+	&::before {
+		content: var(--has-border, none);
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 100vw;
+		height: 1px;
+		background-color: #e6e6e6;
+		box-shadow: 100vw 0 0 0 #e6e6e6;
 	}
 
 	@media #{$tablet-only} {
@@ -53,6 +66,7 @@
 
 .products__name {
 	@media #{$mobile-only} {
+		font-weight: 400;
 		font-size: 16px;
 		line-height: 20px;
 		grid-column: 2/3;
