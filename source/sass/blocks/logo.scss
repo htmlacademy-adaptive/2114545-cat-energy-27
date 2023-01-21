@@ -1,26 +1,12 @@
 .logo {
+	display: grid;
+	grid-template-columns: 1fr auto 1fr;
 	text-decoration: none;
+	gap: 12px;
+	align-items: center;
 
-	@media #{$mobile-only} {
-		display: grid;
-		grid-template-columns: 1fr auto 1fr;
-		align-items: center;
-	}
-
-	&::after {
-		content: "";
-	}
-
-	@media #{$tablet-only} {
-		margin-right: 94px;
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-	}
-
-	@media #{$desktop-only} {
-
-		display: grid;
-		grid-template-columns: 1fr 1fr;
+	@media #{$not-mobile} {
+		grid-template-columns: auto 1fr;
 	}
 }
 
@@ -43,8 +29,9 @@
 		padding-bottom: 24px;
 	}
 
-	@media #{$tablet-only} {
-		padding-top: 19px;
+	@media #{$desktop-only} {
+		width: 118px;
+		height: 22px;
 	}
 
 	&:hover {

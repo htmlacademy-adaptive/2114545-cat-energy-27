@@ -5,14 +5,21 @@
 	font-weight: 500;
 	text-transform: uppercase;
 
-	@media #{$tablet-only} {
-		display: flex;
-		flex-wrap: wrap;
+	@media #{$not-mobile} {
+		display: grid;
+		grid-template-columns: auto 1fr;
+		gap: 2em;
+		padding-block: 25px;
 	}
 
 	@media #{$desktop-only} {
-		display: flex;
-		flex-wrap: wrap;
-		padding-top: 53px;
+		grid-template-columns: 1fr 1fr;
+		padding-block: 53px;
+	}
+}
+
+.main-header__logo {
+	@media #{$not-mobile} {
+		place-self: start;
 	}
 }
