@@ -40,7 +40,6 @@
 
 	@media #{$tablet-only} {
 		display: grid;
-		grid-template-columns: 1fr 1fr;
 	}
 
 	&::marker {
@@ -64,12 +63,34 @@
 	text-decoration: none;
 }
 
-.products__name {
+.products__link--text {
 	@media #{$mobile-only} {
-		font-weight: 400;
+		grid-column: 2/3;
+	}
+}
+
+.products__link--image {
+	@media #{$mobile-only} {
+		grid-column: 1/2;
+		grid-row: 1/3;
+		align-self: center;
+		display: block;
+		text-align: center;
+	}
+}
+
+.products__name {
+	text-transform: uppercase;
+	font-weight: 400;
+
+	@media #{$mobile-only} {
 		font-size: 16px;
 		line-height: 20px;
-		grid-column: 2/3;
+	}
+
+	@media #{$tablet-only} {
+		font-size: 20px;
+		line-height: 24px;
 	}
 }
 

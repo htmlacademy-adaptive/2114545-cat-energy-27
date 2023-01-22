@@ -1,3 +1,9 @@
+.goods-characteristics {
+	@media #{$mobile-only} {
+		grid-column: 2/3;
+	}
+}
+
 .goods-characteristics__list {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
@@ -6,4 +12,5 @@
 	font-size: 12px;
 	line-height: 16px;
 	font-family: var(--main-font);
+	padding-bottom: 23px;
 }
