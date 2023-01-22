@@ -22,11 +22,15 @@
 
 .options__item {
 	display: flow-root;
-	padding: 20px;
+	padding: 19px 20px;
 	background-color: hsl(0 0% 95%);
 
 	@media #{$not-mobile} {
-		padding: 52px;
+		padding: 51px 52px;
+	}
+
+	@media #{$desktop-only} {
+		padding: 51px 52px 59px;
 	}
 
 	&--icon_slim {
@@ -39,7 +43,7 @@
 
 	&--has_icon {
 		--has-icon: "";
-		--circle-radius: calc(100% * 100 / 280);
+		--circle-radius: 50%;
 		--circle-color: var(--accent-color);
 		--icon-position: left;
 		--icon-size: 70px;
@@ -68,30 +72,47 @@
 		inline-size: var(--icon-size);
 		margin: var(--icon-margin);
 		background-image:
-			var(--icon, var(--icon-a)),
+			var(--icon),
 			radial-gradient(
 				var(--circle-color) calc(var(--circle-radius) - 0.5px),
-				transparent calc(var(--circle-radius) + 0.5px));
+				transparent calc(var(--circle-radius) + 0.5px)
+			);
+	}
+
+	&::marker {
+		color: transparent;
 	}
 }
 
-.options__item::marker {
-	color: transparent;
+.options__title {
+	margin-block: 10px 30px;
+
+	@media #{$not-mobile} {
+		margin-block: 25px;
+	}
+
+	@media #{$desktop-only} {
+		margin-block-end: 73px;
+	}
 }
 
 .options__text {
 	color: #444444;
-	font-family: var(--main-font);
+	font-size: 14px;
+	line-height: 18px;
 
 	@media #{$mobile-only} {
-		font-size: 14px;
-		line-height: 18px;
 		padding-bottom: 24px;
 	}
 
-	@media #{$desktop-only} {
+	@media #{$not-mobile} {
 		font-size: 16px;
 		line-height: 24px;
+		padding-bottom: 36px;
+	}
+
+	@media #{$desktop-only} {
+		padding-bottom: 12px;
 	}
 }
 
@@ -107,7 +128,7 @@
 		line-height: 16px;
 	}
 
-	@media #{$tablet-only} {
+	@media #{$not-mobile} {
 		font-size: 20px;
 		line-height: 30px;
 	}
@@ -125,15 +146,11 @@
 		display: inline-flex;
 		align-items: center;
 		gap: 15px;
-		line-height: 1.5;
-		font-family: var(--font-accent);
-		font-size: 16px;
 		color: hsl(0 0% 0%);
 		text-transform: uppercase;
 		text-decoration: none;
 
 		@media #{$tablet-only} {
-			font-size: 20px;
 			gap: 25px;
 		}
 
