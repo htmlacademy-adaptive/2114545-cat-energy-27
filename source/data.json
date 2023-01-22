@@ -210,12 +210,12 @@
 			]
 		},
 		"herocat": {
-			"ext": "png",
+			"ext": "jpg",
 			"maxdppx": 2,
 			"sizes": [
 				{
 					"viewport": "desktop",
-					"width": 720,
+					"width": 1044,
 					"height": 694
 				},
 				{

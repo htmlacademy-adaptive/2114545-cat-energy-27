@@ -4,14 +4,20 @@
 
 	&--lvl_1 {
 		@media #{$mobile-only} {
+			margin-block: 28px;
 			font-size: 36px;
 			line-height: 36px;
 		}
 
 		@media #{$not-mobile} {
+			margin-block: 32px;
 			font-size: 60px;
 			line-height: 60px;
 			color: #000000;
+		}
+
+		@media #{$desktop-only} {
+			margin-block: 53px;
 		}
 	}
 

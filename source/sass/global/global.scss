@@ -3,3 +3,8 @@ img {
 	max-width: 100%;
 	object-fit: contain;
 }
+
+picture,
+source {
+	display: contents;
+}
