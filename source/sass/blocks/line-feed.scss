@@ -1,0 +1,10 @@
+.line-feed {
+	@media #{$not-mobile} {
+		--a: "\A";
+	}
+
+	&::before {
+		content: var(--a, none);
+		white-space: pre;
+	}
+}
