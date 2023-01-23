@@ -4,4 +4,28 @@
 	text-decoration: none;
 	font-size: 16px;
 	line-height: 19px;
+	display: flex;
+	align-items: center;
+	gap: 28px;
+
+	@media #{$mobile-only} {
+		justify-content: space-between;
+	}
+
+	&:hover {
+		--icon-color: #68b738;
+	}
+
+	&:active {
+		opacity: 0.3;
+	}
+
+	&::after {
+		content: "";
+		display: block;
+		width: 27px;
+		height: 34px;
+		background: var(--icon-color, #666666);
+		mask: url("../../icons/stack.svg#htmlacademy-logo") no-repeat center / cover;
+	}
 }

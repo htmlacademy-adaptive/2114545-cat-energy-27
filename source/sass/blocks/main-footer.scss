@@ -8,8 +8,43 @@
 .main-footer__wrapper {
 	display: grid;
 	text-align: center;
+	padding-block: 20px;
 
 	@media #{$not-mobile} {
-		grid-template-columns: repeat(3, 1fr);
+		grid-template-columns: 1fr auto 1fr;
+		align-items: center;
+		padding-block: 56px;
+	}
+
+	@media #{$desktop-only} {
+		padding-block: 68px;
+	}
+}
+
+.main-footer__logo-footer {
+	@media #{$mobile-only} {
+		padding-block: 20px;
+		border-bottom: 1px solid #d9d9d9;
+	}
+
+	@media #{$not-mobile} {
+		justify-self: start;
+	}
+}
+
+.main-footer__social {
+	@media #{$mobile-only} {
+		padding-block: 20px;
+		border-bottom: 1px solid #d9d9d9;
+	}
+}
+
+.main-footer__logo-academy {
+	@media #{$mobile-only} {
+		padding-block: 20px;
+	}
+
+	@media #{$not-mobile} {
+		justify-self: end;
 	}
 }

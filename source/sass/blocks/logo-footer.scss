@@ -1,0 +1,23 @@
+.logo-footer {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.logo-footer__text {
+	--fill: #111111;
+	display: block;
+
+	@media #{$not-mobile} {
+		width: 143px;
+		height: 27px;
+	}
+
+	&:hover {
+		--fill: #3e3e3e;
+	}
+
+	&:active {
+		--fill: #6b6b6b;
+	}
+}

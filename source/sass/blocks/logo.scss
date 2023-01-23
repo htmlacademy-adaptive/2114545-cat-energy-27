@@ -42,36 +42,3 @@
 		opacity: 60%;
 	}
 }
-
-.logo-footer {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-}
-
-.logo-footer__text {
-	--fill: #111111;
-	display: block;
-
-	@media #{$mobile-only} {
-		padding-top: 23px;
-		padding-bottom: 24px;
-	}
-
-	@media #{$tablet-only} {
-		padding-top: 19px;
-	}
-
-	&:hover {
-		opacity: 80%;
-	}
-
-	&:active {
-		opacity: 60%;
-	}
-}
-
-.logo-academy__link {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-}
