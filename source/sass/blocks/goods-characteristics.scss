@@ -14,3 +14,19 @@
 	font-family: var(--main-font);
 	padding-bottom: 23px;
 }
+
+.goods-characteristics__name {
+	@media #{$tablet-only} {
+		font-size: 16px;
+		line-height: 16px;
+	}
+}
+
+.goods-characteristics__value {
+	text-align: right;
+
+	@media #{$tablet-only} {
+		font-size: 16px;
+		line-height: 16px;
+	}
+}

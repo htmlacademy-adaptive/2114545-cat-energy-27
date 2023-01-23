@@ -27,3 +27,14 @@
 		}
 	}
 }
+
+.gifts-text__space {
+	@media #{$mobile-only} {
+		--a: "\A";
+	}
+
+	&::before {
+		content: var(--a, none);
+		white-space: pre;
+	}
+}
