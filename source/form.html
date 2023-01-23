@@ -53,10 +53,12 @@
 
 			<fieldset class="form__group-contacts contacts page__centerer">
 				<legend class="contacts__title heading heading--lvl_2 heading--decoration_lines">Контактные данные (владельца кота)</legend>
-				<label class="contacts__label" for="email">E-mail:<span aria-hidden="true">*</span></label>
-				<input class="contacts__input" placeholder="kuklachev@gmail.com" type="email" id="email" name="email" required>
-				<label class="contacts__label" for="phone">Телефон:<span aria-hidden="true">*</span></label>
-				<input class="contacts__input" placeholder="8 (960) 900-60-90" type="tel" id="phone" name="phone" required>
+				<div class="contacts__label-wrapper">
+					<label class="contacts__label" for="email">E-mail:<span aria-hidden="true">*</span></label>
+					<input class="contacts__input contacts__input--email" placeholder="kuklachev@gmail.com" type="email" id="email" name="email" required>
+					<label class="contacts__label" for="phone">Телефон:<span aria-hidden="true">*</span></label>
+					<input class="contacts__input contacts__input--phone" placeholder="8 (960) 900-60-90" type="tel" id="phone" name="phone" required>
+				</div>
 			</fieldset>
 
 			<div class="questionary__comments comments page__centerer">

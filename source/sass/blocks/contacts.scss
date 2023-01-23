@@ -7,24 +7,81 @@
 }
 
 .contacts__title {
-	padding-bottom: 11px;
-	position: relative;
+	@media #{$mobile-only} {
+		padding-bottom: 35px;
+		position: relative;
+	}
 
-	@media #{$not-mobile} {
+	@media #{$tablet-only} {
 		padding-bottom: 40px;
+	}
+
+	@media #{$desktop-only} {
+		padding-bottom: 40px;
+	}
+}
+
+.contacts__label-wrapper {
+	display: grid;
+
+	@media #{$mobile-only} {
+		grid-template-columns: 68px 1fr;
+		column-gap: 10px;
+		row-gap: 14px;
+	}
+
+	@media #{$tablet-only} {
+		grid-template-columns: 85px 1fr;
+		column-gap: 20px;
+		row-gap: 20px;
+	}
+
+	@media #{$desktop-only} {
+		display: flex;
 	}
 }
 
 .contacts__label {
 	color: #444444;
-	font-size: 16px;
-	line-height: 18px;
 	text-transform: uppercase;
+
+	@media #{$mobile-only} {
+		font-size: 16px;
+		line-height: 18px;
+	}
+
+	@media #{$tablet-only} {
+		font-size: 20px;
+		line-height: 29px;
+	}
+
+	@media #{$desktop-only} {
+		font-size: 20px;
+		line-height: 29px;
+	}
 }
 
 .contacts__input {
+	color: #444444;
+	text-transform: uppercase;
+	border: 1px solid #cdcdcd;
+	font-family: var(--accent-font);
+
 	@media #{$mobile-only} {
 		width: 220px;
+		font-size: 16px;
+		line-height: 18px;
+		padding-top: 14px;
+		padding-bottom: 14px;
+		padding-left: 15px;
+	}
+
+	@media #{$not-mobile} {
+		font-size: 20px;
+		line-height: 29px;
+		padding-top: 11px;
+		padding-bottom: 11px;
+		padding-left: 20px;
 	}
 
 	@media #{$tablet-only} {
@@ -33,5 +90,25 @@
 
 	@media #{$desktop-only} {
 		width: 486px;
+	}
+}
+
+.contacts__input--email {
+	@media #{$mobile-only} {
+		background: url("../../icons/stack.svg#mail") no-repeat center right 15px / 20px 20px;
+	}
+
+	@media #{$not-mobile} {
+		background: url("../../icons/stack.svg#mail") no-repeat center right 18px / 20px 20px;
+	}
+}
+
+.contacts__input--phone {
+	@media #{$mobile-only} {
+		background: url("../../icons/stack.svg#phone") no-repeat center right 15px / 20px 20px;
+	}
+
+	@media #{$not-mobile} {
+		background: url("../../icons/stack.svg#phone") no-repeat center right 18px / 20px 20px;
 	}
 }

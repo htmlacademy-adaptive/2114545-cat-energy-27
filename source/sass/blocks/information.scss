@@ -96,17 +96,14 @@
 
 	@media #{$mobile-only} {
 		grid-template-columns: 94px 1fr;
-		margin-bottom: 14px;
 	}
 
 	@media #{$tablet-only} {
 		grid-template-columns: 117px 1fr;
-		margin-bottom: 20px;
 	}
 
 	@media #{$desktop-only} {
 		grid-template-columns: 117px 1fr;
-		margin-bottom: 20px;
 	}
 }
 

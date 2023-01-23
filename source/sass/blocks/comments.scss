@@ -1,3 +1,8 @@
+.comments {
+	display: flex;
+	flex-direction: column;
+}
+
 .comments__label {
 	padding-bottom: 14px;
 
@@ -7,8 +12,26 @@
 }
 
 .comments__text {
-	min-width: 280px;
-	min-height: 150px;
+	border: 1px solid #e7e7e7;
+	text-transform: uppercase;
+	color: #444444;
+	font-family: var(--accent-font);
+
+	@media #{$mobile-only} {
+		min-width: 280px;
+		min-height: 150px;
+		font-size: 16px;
+		line-height: 18px;
+		padding-top: 9px;
+		padding-left: 15px;
+	}
+
+	@media #{$not-mobile} {
+		font-size: 20px;
+		line-height: 30px;
+		padding-top: 19px;
+		padding-left: 10px;
+	}
 
 	@media #{$tablet-only} {
 		min-width: 631px;

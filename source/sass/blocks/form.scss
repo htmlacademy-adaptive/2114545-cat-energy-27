@@ -60,16 +60,23 @@
 
 .form__required-fields {
 	text-align: center;
+	font-family: var(--main-font);
 
 	@media #{$mobile-only} {
 		padding-top: 21px;
+		font-size: 14px;
+		line-height: 16px;
 	}
 
 	@media #{$tablet-only} {
 		padding-left: 64px;
+		font-size: 16px;
+		line-height: 16px;
 	}
 
 	@media #{$desktop-only} {
 		padding-left: 84px;
+		font-size: 16px;
+		line-height: 16px;
 	}
 }
