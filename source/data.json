@@ -41,6 +41,38 @@
 				}
 			]
 		},
+		"fatcat": {
+			"ext": "png",
+			"maxdppx": 2,
+			"sizes": [
+				{
+					"viewport": "tablet",
+					"width": 560,
+					"height": 512
+				},
+				{
+					"viewport": "mobile",
+					"width": 280,
+					"height": 256
+				}
+			]
+		},
+		"thincat": {
+			"ext": "png",
+			"maxdppx": 2,
+			"sizes": [
+				{
+					"viewport": "tablet",
+					"width": 560,
+					"height": 512
+				},
+				{
+					"viewport": "mobile",
+					"width": 280,
+					"height": 256
+				}
+			]
+		},
 		"feed": {
 			"ext": "png",
 			"maxdppx": 2,

@@ -58,82 +58,44 @@
 	</section>
 
 	<section class="before-after">
-		<div class="page__centerer">
-			<h2 class="before-after__title heading heading--lvl_2">Живой пример</h2>
-			<p class="before-after__description">Борис сбросил 5 кг за 2 месяца, просто
-				заменив свой обычный корм на Cat Energy
-				Slim. Отличный результат без изнуряющих
-				тренировок! При этом он не менял своих
-				привычек и по-прежнему спит по 16 часов
-				в день. </p>
+		<div class="page__centerer before-after__container">
+			<div>
+				<h2 class="before-after__title heading heading--lvl_2">Живой пример</h2>
+				<div class="before-after__description">
+					Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
+				</div>
+				<dl class="before-after__example-list">
+					<div class="before-after__example-item cartouche">
+						<dt class="before-after__example-name cartouche__name">Снижение веса</dt>
+						<dd class="before-after__example-value cartouche__value">5 кг</dd>
+					</div>
+					<div class="before-after__example-item cartouche">
+						<dt class="before-after__example-name cartouche__name">Затрачено времени</dt>
+						<dd class="before-after__example-value cartouche__value">60 дней</dd>
+					</div>
+					<div class="before-after__example-item before-after__example-item--wide">
+						<dt class="before-after__example-name">Затраты на питание</dt>
+						<dd class="before-after__example-value">15 000 руб.</dd>
+					</div>
+				</dl>
+			</div>
 
 			<figure class="before-after__compare compare">
 				<figcaption class="compare__description page__hidden">Кот Борис до и после 2 месяцев питания кормом Cat Energy Slim.</figcaption>
 				<div class="compare__wrapper slider" style="--curtain-place: 0.5;">
-					<div class="slider__before">
-						<picture>
-							<source type="image/avif" media="(min-width: 768px)" srcset="
-							./img/fatcat-tablet@1x.avif 1x, ./img/fatcat-tablet@2x.avif 2x" width="560" height="512">
-							<source type="image/avif" srcset="
-										./img/fatcat-mobile@1x.avif 1x, ./img/fatcat-mobile@2x.avif 2x" width="280" height="256">
-							<source type="image/webp" media="(min-width: 768px)" srcset="
-										./img/fatcat-tablet@1x.webp 1x,
-										./img/fatcat-tablet@2x.webp 2x" width="560" height="512">
-							<source type="image/webp" srcset="
-										./img/fatcat-mobile@1x.webp 1x,
-										./img/fatcat-mobile@2x.webp 2x" width="280" height="256">
-							<source media="(min-width: 768px)" srcset="
-										./img/fatcat-tablet@1x.png 1x,
-										./img/fatcat-tablet@2x.png 2x" width="560" height="512">
-							<img class="compare__image slider__image slider__image--state_before" src="./img/fatcat-mobile@1x.png" srcset="./img/fatcat-mobile@2x.png 2x" width="280" height="256" alt="Раньше у кота Бориса было ожирение.">
-						</picture>
-					</div>
+					{% include "./templates/picture.twig" with {name: "fatcat", class: "compare__image slider__image slider__image--state_before", alt: "Раньше у кота Бориса было ожирение."} %}
+					{# <div class="slider__before">
+					</div> #}
 					<div class="slider__curtain">
 						<button class="slider__thumb" type="button">
 							<span class="page__hidden">Ползунок слайдера</span>
 						</button>
 					</div>
-					<div class="slider__after">
-						<picture>
-							<source type="image/avif" media="(min-width: 768px)" srcset="
-										./img/thincat-tablet@1x.avif 1x,
-										./img/thincat-tablet@2x.avif 2x">
-							<source type="image/avif" srcset="
-										./img/thincat-mobile@1x.avif 1x,
-										./img/thincat-mobile@2x.avif 2x">
-							<source type="image/webp" media="(min-width: 768px)" srcset="
-										./img/thincat-tablet@1x.webp 1x,
-										./img/thincat-tablet@2x.webp 2x">
-							<source type="image/webp" srcset="
-										./img/thincat-mobile@1x.webp 1x,
-										./img/thincat-mobile@2x.webp 2x">
-							<source media="(min-width: 768px)" srcset="
-										./img/thincat-tablet@1x.png 1x,
-										./img/thincat-tablet@2x.png 2x">
-							<img class="compare__image slider__image slider__image--state_after" src="./img/thincat-mobile@1x.png" srcset="./img/thincat-mobile@2x.png 2x" width="280" height="256" alt="Теперь кот Борис стройняшка.">
-						</picture>
-					</div>
+					{% include "./templates/picture.twig" with {name: "thincat", class: "compare__image slider__image slider__image--state_after", alt: "Теперь кот Борис стройняшка."} %}
+					{# <div class="slider__after">
+					</div> #}
 				</div>
 			</figure>
-
-			<dl class="before-after__example-list">
-				<div class="before-after__example-item before-after__example-item--frame">
-					<dt class="before-after__example-name before-after__example-name--frame">Снижение веса</dt>
-					<dd class="before-after__example-value before-after__example-value--frame">5 кг</dd>
-				</div>
-				<div class="before-after__example-item before-after__example-item--frame">
-					<dt class="before-after__example-name before-after__example-name--frame">Затрачено времени</dt>
-					<dd class="before-after__example-value before-after__example-value--frame">60 дней</dd>
-				</div>
-				<div class="before-after__example-item">
-					<dt class="before-after__example-text">Затраты на питание:</dt>
-					<dd class="before-after__example-value">15 000 руб.</dd>
-				</div>
-			</dl>
-
-			<div class="before-after__cat-slayder">
-				<!--слайдер с котиком-->
-			</div>
 		</div>
 	</section>
 
