@@ -18,19 +18,23 @@
 
 				<div class="information__wrapper">
 
-					<div class="information__field-wrapper">
-						<label class="information__label" for="name">Имя:<span aria-hidden="true">*</span></label>
-						<input class="information__input" type="text" id="name" placeholder="Укажите кличку" value="Барсик" name="cat-name" required>
-					</div>
+					<div class="information__form-wrapper">
 
-					<div class="information__field-wrapper">
-						<label class="information__label" for="weight">Вес (кг):<span aria-hidden="true">*</span></label>
-						<input class="information__input" type="text" id="weight" placeholder="Укажите вес" value="7" name="cat-weight" required>
-					</div>
+						<div class="information__field-wrapper">
+							<label class="information__label" for="name">Имя:<span aria-hidden="true">*</span></label>
+							<input class="information__input" type="text" id="name" placeholder="Укажите кличку" value="Барсик" name="cat-name" required>
+						</div>
 
-					<div class="information__field-wrapper">
-						<label class="information__label" for="age">Возраст (лет):</label>
-						<input class="information__input" type="text" id="age" placeholder="Укажите возраст" value="7" name="cat-age">
+						<div class="information__field-wrapper">
+							<label class="information__label" for="weight">Вес (кг):<span aria-hidden="true">*</span></label>
+							<input class="information__input" type="text" id="weight" placeholder="Укажите вес" value="7" name="cat-weight" required>
+						</div>
+
+						<div class="information__field-wrapper">
+							<label class="information__label" for="age">Возраст (лет):</label>
+							<input class="information__input" type="text" id="age" placeholder="Укажите возраст" value="7" name="cat-age">
+						</div>
+
 					</div>
 
 					<div class="information__radio-wrapper">
@@ -53,11 +57,18 @@
 
 			<fieldset class="form__group-contacts contacts page__centerer">
 				<legend class="contacts__title heading heading--lvl_2 heading--decoration_lines">Контактные данные (владельца кота)</legend>
-				<div class="contacts__label-wrapper">
-					<label class="contacts__label" for="email">E-mail:<span aria-hidden="true">*</span></label>
-					<input class="contacts__input contacts__input--email" placeholder="kuklachev@gmail.com" type="email" id="email" name="email" required>
-					<label class="contacts__label" for="phone">Телефон:<span aria-hidden="true">*</span></label>
-					<input class="contacts__input contacts__input--phone" placeholder="8 (960) 900-60-90" type="tel" id="phone" name="phone" required>
+				<div class="contacts__wrapper">
+
+					<div class="contacts__label-wrapper">
+						<label class="contacts__label" for="email">E-mail:<span aria-hidden="true">*</span></label>
+						<input class="contacts__input contacts__input--email" placeholder="kuklachev@gmail.com" type="email" id="email" name="email" required>
+					</div>
+
+					<div class="contacts__label-wrapper">
+						<label class="contacts__label" for="phone">Телефон:<span aria-hidden="true">*</span></label>
+						<input class="contacts__input contacts__input--phone" placeholder="8 (960) 900-60-90" type="tel" id="phone" name="phone" required>
+					</div>
+
 				</div>
 			</fieldset>
 
@@ -68,6 +79,7 @@
 
 			<fieldset class="form__group-additional-goods additional-goods page__centerer">
 				<legend class="additional-goods__title heading heading--lvl_2 heading--decoration_lines">Дополнительно</legend>
+
 				<label class="additional-goods__label">
 					<input class="additional-goods__input" type="checkbox" name="type-of-additional-goods" value="sweetener" checked>
 					Сахарозаменитель
@@ -84,6 +96,7 @@
 					<input class="additional-goods__input" type="checkbox" name="type-of-additional-goods" value="vitamins">
 					Витамины
 				</label>
+
 			</fieldset>
 			<div class="form__button-wrapper page__centerer">
 				<button class="form__button" type="submit">Отправить заявку</button>

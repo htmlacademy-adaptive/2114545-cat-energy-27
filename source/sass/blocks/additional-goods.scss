@@ -5,7 +5,7 @@
 
 	@media #{$tablet-only} {
 		grid-template-columns: 1fr 1fr;
-		margin-bottom: 54px;
+		margin-bottom: 59px;
 	}
 
 	@media #{$desktop-only} {
@@ -16,11 +16,11 @@
 
 .additional-goods__title {
 	@media #{$mobile-only} {
-		padding-bottom: 10px;
+		padding-bottom: 34px;
 	}
 
 	@media #{$not-mobile} {
-		padding-bottom: 21px;
+		padding-bottom: 57px;
 	}
 }
 

@@ -24,6 +24,7 @@
 	@media #{$tablet-only} {
 		flex-direction: row;
 		margin-bottom: 72px;
+		justify-content: center;
 	}
 
 	@media #{$desktop-only} {
@@ -72,11 +73,13 @@
 		padding-left: 64px;
 		font-size: 16px;
 		line-height: 16px;
+		align-self: center;
 	}
 
 	@media #{$desktop-only} {
 		padding-left: 84px;
 		font-size: 16px;
 		line-height: 16px;
+		align-self: center;
 	}
 }

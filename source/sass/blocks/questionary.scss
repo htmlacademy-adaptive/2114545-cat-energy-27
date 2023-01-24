@@ -4,14 +4,33 @@
 	font-family: var(--accent-font);
 }
 
+.questionary__title {
+	@media #{$mobile-only} {
+		margin-block: 27px;
+	}
+
+	@media #{$tablet-only} {
+		padding-bottom: 22px;
+	}
+
+	@media #{$desktop-only} {
+		padding-bottom: 3px;
+	}
+}
+
 .questionary__text {
-	font-size: 14px;
-	line-height: 18px;
 	text-transform: uppercase;
 	font-weight: 400;
+
+	@media #{$mobile-only} {
+		font-size: 14px;
+		line-height: 18px;
+		padding-bottom: 25px;
+	}
 
 	@media #{$not-mobile} {
 		font-size: 20px;
 		line-height: 30px;
+		padding-bottom: 46px;
 	}
 }

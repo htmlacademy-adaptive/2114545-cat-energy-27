@@ -1,13 +1,27 @@
 .comments {
 	display: flex;
 	flex-direction: column;
+
+	@media #{$mobile-only} {
+		margin-bottom: 23px;
+	}
+
+	@media #{$tablet-only} {
+		margin-bottom: 65px;
+	}
+
+	@media #{$desktop-only} {
+		margin-bottom: 67px;
+	}
 }
 
 .comments__label {
-	padding-bottom: 14px;
+	@media #{$mobile-only} {
+		padding-bottom: 38px;
+	}
 
 	@media #{$not-mobile} {
-		padding-bottom: 40px;
+		padding-bottom: 76px;
 	}
 }
 
