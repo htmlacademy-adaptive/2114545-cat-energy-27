@@ -32,6 +32,7 @@
 	@media #{$mobile-only} {
 		font-size: 24px;
 		line-height: 24px;
+		padding-bottom: 6px;
 	}
 
 	@media #{$tablet-only} {

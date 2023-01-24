@@ -39,8 +39,9 @@
 	}
 
 	@media #{$tablet-only} {
-		display: flex;
-		flex-direction: column;
+		display: grid;
+
+		grid-template-rows: min-content 1fr;
 	}
 
 	&::marker {
@@ -97,17 +98,6 @@
 	@media #{$tablet-only} {
 		font-size: 20px;
 		line-height: 24px;
-	}
-}
-
-.products__name-space {
-	@media #{$mobile-only} {
-		--a: "\A";
-	}
-
-	&::before {
-		content: var(--a, none);
-		white-space: pre;
 	}
 }
 

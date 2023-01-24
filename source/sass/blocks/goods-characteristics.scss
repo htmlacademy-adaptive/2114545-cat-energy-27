@@ -24,6 +24,7 @@
 
 .goods-characteristics__value {
 	text-align: right;
+	margin-inline-start: 0;
 
 	@media #{$tablet-only} {
 		font-size: 16px;

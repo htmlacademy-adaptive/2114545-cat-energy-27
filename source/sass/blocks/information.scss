@@ -27,6 +27,7 @@
 .information__label {
 	color: #444444;
 	align-self: center;
+	flex-shrink: 0;
 }
 
 .information__program-label {
@@ -109,11 +110,14 @@
 		padding-right: 412px;
 		padding-bottom: 11px;
 		padding-left: 20px;
+		box-sizing: border-box;
+		flex-grow: 1;
 	}
 }
 
 .information__field-wrapper {
-	display: grid;
+	display: flex;
+	gap: 20px;
 
 	@media #{$mobile-only} {
 		grid-template-columns: 94px 1fr;
