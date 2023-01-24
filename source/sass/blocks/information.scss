@@ -26,6 +26,7 @@
 
 .information__label {
 	color: #444444;
+	align-self: center;
 }
 
 .information__program-label {
@@ -84,28 +85,28 @@
 	text-transform: uppercase;
 
 	@media #{$mobile-only} {
-		width: 228px;
 		font-size: 16px;
 		line-height: 18px;
 		padding-top: 14px;
+		padding-right: 146px;
 		padding-bottom: 13px;
 		padding-left: 20px;
 	}
 
 	@media #{$tablet-only} {
-		width: 570px;
 		font-size: 20px;
 		line-height: 30px;
 		padding-top: 11px;
+		padding-right: 472px;
 		padding-bottom: 11px;
 		padding-left: 20px;
 	}
 
 	@media #{$desktop-only} {
-		width: 509px;
 		font-size: 20px;
 		line-height: 30px;
 		padding-top: 11px;
+		padding-right: 412px;
 		padding-bottom: 11px;
 		padding-left: 20px;
 	}
