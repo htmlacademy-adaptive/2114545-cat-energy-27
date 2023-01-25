@@ -1,15 +1,23 @@
+.characteristics {
+	align-self: center;
+}
 
 .characteristics__list {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	font-size: 14px;
-	line-height: 14px;
 	color: #444444;
 	font-family: var(--main-font);
+	display: grid;
+	grid-template-columns: 1fr 1fr;
 
 	@media #{$mobile-only} {
+		font-size: 14px;
+		line-height: 14px;
 		margin: 0;
 		padding-bottom: 15px;
+	}
+
+	@media #{$not-mobile} {
+		font-size: 16px;
+		line-height: 20px;
 	}
 }
 

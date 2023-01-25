@@ -66,8 +66,12 @@
 	grid-template-columns: auto;
 	row-gap: 31px;
 
-	@media #{$not-mobile} {
+	@media #{$tablet-only} {
 		row-gap: 54px;
+	}
+
+	@media #{$desktop-only} {
+		row-gap: 42px;
 	}
 }
 
@@ -99,6 +103,16 @@
 
 	@media #{$desktop-only} {
 		grid-template-columns: 1fr 1fr 1fr;
+
+		&::before {
+			content: var(--has-border, none);
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 100vw;
+			height: 1px;
+			background-color: #e6e6e6;
+		}
 	}
 }
 
@@ -145,5 +159,6 @@
 
 	@media #{$desktop-only} {
 		padding: 7px 26px 7px 26px;
+		align-self: center;
 	}
 }
