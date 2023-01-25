@@ -129,6 +129,14 @@
 	color: var(--link-color, #000000);
 	text-decoration: none;
 
+	&:hover {
+		opacity: 60%;
+	}
+
+	&:active {
+		opacity: 30%;
+	}
+
 	@media #{$mobile-only} {
 		width: 100%;
 		padding: 23px;

@@ -81,10 +81,7 @@
 .main-hero__heading {
 	@media #{$mobile-only} {
 		text-align: center;
-	}
-
-	@media #{$not-mobile} {
-		// margin-block: 20px;
+		color: #ffffff;
 	}
 }
 
@@ -149,6 +146,10 @@
 	&:active {
 		background-color: #5eaa2f;
 		color: rgba(255 255 255 / 0.3);
+	}
+
+	&:disabled:hover {
+		cursor: default;
 	}
 }
 

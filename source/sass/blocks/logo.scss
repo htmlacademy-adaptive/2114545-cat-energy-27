@@ -5,6 +5,14 @@
 	gap: 12px;
 	align-items: center;
 
+	&:hover {
+		opacity: 80%;
+	}
+
+	&:active {
+		opacity: 60%;
+	}
+
 	@media #{$not-mobile} {
 		grid-template-columns: auto 1fr;
 	}

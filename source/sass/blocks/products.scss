@@ -26,17 +26,17 @@
 		grid-template-columns: 1fr 1fr;
 		--has-border: "";
 		position: relative;
-	}
 
-	&::before {
-		content: var(--has-border, none);
-		position: absolute;
-		top: 0;
-		right: 0;
-		width: 100vw;
-		height: 1px;
-		background-color: #e6e6e6;
-		box-shadow: 100vw 0 0 0 #e6e6e6;
+		&::before {
+			content: var(--has-border, none);
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 100vw;
+			height: 1px;
+			background-color: #e6e6e6;
+			box-shadow: 100vw 0 0 0 #e6e6e6;
+		}
 	}
 
 	@media #{$not-mobile} {
@@ -127,6 +127,19 @@
 	text-decoration: none;
 	font-family: var(--accent-font);
 	background-color: #68b738;
+
+	&:hover {
+		background-color: #5eaa2f;
+	}
+
+	&:active {
+		background-color: #5eaa2f;
+		color: rgba(255 255 255 / 0.3);
+	}
+
+	&:disabled:hover {
+		cursor: default;
+	}
 
 	@media #{$mobile-only} {
 		font-size: 16px;

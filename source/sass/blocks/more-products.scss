@@ -76,6 +76,18 @@
 	text-align: center;
 	text-transform: uppercase;
 
+	&:hover {
+		background-color: #ebebeb;
+	}
+
+	&:active {
+		opacity: 30%;
+	}
+
+	&:disabled:hover {
+		cursor: default;
+	}
+
 	@media #{$mobile-only} {
 		font-size: 16px;
 		line-height: 20px;

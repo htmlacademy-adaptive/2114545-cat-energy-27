@@ -49,6 +49,16 @@
 	margin: 0;
 	appearance: none;
 	border: 1px solid #cdcdcd;
+	cursor: pointer;
+
+	&:disabled {
+		opacity: 30%;
+	}
+
+	&:disabled:hover {
+		opacity: 30%;
+		cursor: default;
+	}
 
 	@media #{$mobile-only} {
 		width: 30px;

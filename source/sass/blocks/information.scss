@@ -54,6 +54,16 @@
 	margin: 0;
 	appearance: none;
 	border: 1px solid #cdcdcd;
+	cursor: pointer;
+
+	&:disabled {
+		opacity: 30%;
+	}
+
+	&:disabled:hover {
+		opacity: 30%;
+		cursor: default;
+	}
 
 	@media #{$mobile-only} {
 		width: 30px;
@@ -84,6 +94,15 @@
 	font-family: var(--accent-font);
 	border: 1px solid #e7e7e7;
 	text-transform: uppercase;
+	outline: none;
+
+	&:hover {
+		border: 1px solid #cdcdcd;
+	}
+
+	&:invalid {
+		border: 2px solid #ff8282;
+	}
 
 	@media #{$mobile-only} {
 		font-size: 16px;

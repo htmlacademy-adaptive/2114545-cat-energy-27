@@ -90,8 +90,21 @@
 .contacts__input {
 	color: #444444;
 	text-transform: uppercase;
-	border: 1px solid #cdcdcd;
+	border: 1px solid #e7e7e7;
 	font-family: var(--accent-font);
+	outline: none;
+
+	&:hover {
+		border: 1px solid #cdcdcd;
+	}
+
+	&:active {
+		border: 1px solid #444444;
+	}
+
+	&:invalid {
+		border: 2px solid #ff8282;
+	}
 
 	@media #{$mobile-only} {
 		font-size: 16px;
@@ -108,10 +121,6 @@
 		padding-bottom: 11px;
 		padding-left: 20px;
 	}
-}
-
-.contacts__input:active {
-	border: 1px solid #444444;
 }
 
 .contacts__input--email {
