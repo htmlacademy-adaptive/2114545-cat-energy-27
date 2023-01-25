@@ -93,6 +93,7 @@
 	border: 1px solid #e7e7e7;
 	font-family: var(--accent-font);
 	outline: none;
+	box-sizing: border-box;
 
 	&:hover {
 		border: 1px solid #cdcdcd;

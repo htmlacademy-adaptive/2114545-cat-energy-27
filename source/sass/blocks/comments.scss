@@ -30,6 +30,7 @@
 	text-transform: uppercase;
 	color: #444444;
 	font-family: var(--accent-font);
+	box-sizing: border-box;
 
 	@media #{$mobile-only} {
 		min-width: 280px;
