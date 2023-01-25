@@ -38,10 +38,10 @@
 		box-shadow: 100vw 0 0 0 #e6e6e6;
 	}
 
-	@media #{$tablet-only} {
-		display: grid;
-
-		grid-template-rows: min-content 1fr;
+	@media #{$not-mobile} {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
 	}
 
 	&::marker {
@@ -69,6 +69,10 @@
 	@media #{$tablet-only} {
 		align-self: center;
 	}
+
+	@media #{$desktop-only} {
+		align-self: center;
+	}
 }
 
 .products__link--image {
@@ -83,6 +87,13 @@
 	@media #{$tablet-only} {
 		order: -1;
 		align-self: center;
+		margin-top: -45px;
+	}
+
+	@media #{$desktop-only} {
+		order: -1;
+		align-self: center;
+		margin-top: -80px;
 	}
 }
 

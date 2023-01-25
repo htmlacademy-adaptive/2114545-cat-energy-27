@@ -13,12 +13,50 @@
 	line-height: 16px;
 	font-family: var(--main-font);
 	padding-bottom: 23px;
+
+	@media #{$tablet-only} {
+		row-gap: 14px;
+		padding-left: 37px;
+		padding-right: 36px;
+	}
+
+	@media #{$desktop-only} {
+		row-gap: 16px;
+		padding-left: 40px;
+		padding-right: 36px;
+	}
 }
 
 .goods-characteristics__name {
+	position: relative;
+
 	@media #{$tablet-only} {
 		font-size: 16px;
 		line-height: 16px;
+
+		&::after {
+			content: "";
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 20px;
+			height: 1px;
+			width: 200%;
+			background-color: #cdcdcd;
+		}
+	}
+
+	@media #{$desktop-only} {
+		&::after {
+			content: "";
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: 20px;
+			height: 1px;
+			width: 200%;
+			background-color: #cdcdcd;
+		}
 	}
 }
 
