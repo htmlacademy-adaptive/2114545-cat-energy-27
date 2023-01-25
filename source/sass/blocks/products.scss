@@ -5,13 +5,14 @@
 
 .products__list {
 	margin: 0;
-	padding: 0;
+	padding: 12px 0;
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(245px, 1fr));
-	gap: 40px;
+	gap: 19px 40px;
 
 	@media #{$not-mobile} {
 		gap: 60px;
+		padding: 50px 0;
 	}
 
 	@media #{$desktop-only} {
@@ -21,6 +22,8 @@
 }
 
 .products__item {
+	padding: 5px 0;
+
 	@media #{$mobile-only} {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
@@ -74,39 +77,42 @@
 	font-family: var(--accent-font);
 	color: #222222;
 	text-decoration: none;
-}
 
-.products__link--text {
-	@media #{$mobile-only} {
-		grid-column: 2/3;
+	&--text {
+		@media #{$mobile-only} {
+			grid-column: 2/3;
+			margin-right: 64px;
+		}
+
+		@media #{$tablet-only} {
+			align-self: center;
+			text-align: center;
+			margin: 0 53px;
+		}
+
+		@media #{$desktop-only} {
+			align-self: center;
+		}
 	}
 
-	@media #{$tablet-only} {
-		align-self: center;
-	}
+	&--image {
+		@media #{$mobile-only} {
+			grid-column: 1/2;
+			grid-row: 1/3;
+			align-self: end;
+			display: block;
+			text-align: center;
+		}
 
-	@media #{$desktop-only} {
-		align-self: center;
-	}
-}
+		@media #{$tablet-only} {
+			order: -1;
+			align-self: center;
+		}
 
-.products__link--image {
-	@media #{$mobile-only} {
-		grid-column: 1/2;
-		grid-row: 1/3;
-		align-self: center;
-		display: block;
-		text-align: center;
-	}
-
-	@media #{$tablet-only} {
-		order: -1;
-		align-self: center;
-	}
-
-	@media #{$desktop-only} {
-		order: -1;
-		align-self: center;
+		@media #{$desktop-only} {
+			order: -1;
+			align-self: center;
+		}
 	}
 }
 
@@ -134,6 +140,23 @@
 	font-family: var(--accent-font);
 	background-color: #68b738;
 
+	@media #{$mobile-only} {
+		margin-top: 20px;
+		font-size: 16px;
+		line-height: 20px;
+		grid-column: 1 / 3;
+		padding: 10px;
+	}
+
+	@media #{$tablet-only} {
+		grid-column: 1/3;
+		padding: 10px 93px 10px 93px;
+	}
+
+	@media #{$desktop-only} {
+		padding: 10px 53px 10px 53px;
+	}
+
 	&:hover {
 		background-color: #5eaa2f;
 	}
@@ -145,22 +168,6 @@
 
 	&:disabled:hover {
 		cursor: default;
-	}
-
-	@media #{$mobile-only} {
-		font-size: 16px;
-		line-height: 20px;
-		grid-column: 1/3;
-		padding: 10px 109px 10px 109px;
-	}
-
-	@media #{$tablet-only} {
-		grid-column: 1/3;
-		padding: 10px 93px 10px 93px;
-	}
-
-	@media #{$desktop-only} {
-		padding: 10px 53px 10px 53px;
 	}
 }
 

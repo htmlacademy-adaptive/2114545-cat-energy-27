@@ -1,13 +1,13 @@
 .more-products {
-	&::before {
+	display: grid;
+	grid-template-columns: 1fr;
+
+	&::after {
 		content: "";
 		display: block;
-		background-image: url("../../icons/stack.svg#plus");
-		background-repeat: no-repeat;
-		background-position: center;
-		background-size: contain;
-		background-color: #ffffff;
-		margin-inline: auto;
+		order: -1;
+		margin: 20px auto;
+		background: #ffffff url("../../icons/stack.svg#plus") no-repeat center / contain;
 
 		@media #{$mobile-only} {
 			width: 30px;
@@ -50,13 +50,12 @@
 	text-transform: uppercase;
 	color: #111111;
 	font-family: var(--accent-font);
+	font-weight: 400;
 
 	@media #{$mobile-only} {
 		font-size: 16px;
 		line-height: 20px;
-		margin: 0;
-		padding-top: 27px;
-		padding-bottom: 8px;
+		margin-block: 4px 9px;
 	}
 }
 
