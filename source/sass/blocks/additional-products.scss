@@ -19,8 +19,8 @@
 	}
 
 	@media #{$desktop-only} {
-		grid-template-columns: 896px 1fr;
-		column-gap: 79px;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 80px;
 	}
 }
 
@@ -82,6 +82,7 @@
 	@media #{$desktop-only} {
 		display: grid;
 		row-gap: 27px;
+		grid-column: span 3;
 	}
 }
 
@@ -112,7 +113,8 @@
 	}
 
 	@media #{$desktop-only} {
-		grid-template-columns: 1fr 1fr 1fr;
+		grid-template-columns: 305px 305px 245px;
+		gap: 20px;
 
 		&::before {
 			content: var(--has-border, none);
