@@ -19,6 +19,18 @@
 		border: 2px solid #f2f2f2;
 		margin-top: 81px;
 	}
+
+	@media #{$tablet-only} {
+		padding-right: 38px;
+		padding-bottom: 41px;
+		padding-left: 38px;
+	}
+
+	@media #{$desktop-only} {
+		padding-right: 37px;
+		padding-bottom: 38px;
+		padding-left: 38px;
+	}
 }
 
 .more-products__show-text {
@@ -98,13 +110,11 @@
 		font-size: 16px;
 		line-height: 20px;
 		padding: 10px 79px 10px 79px;
-		margin-bottom: 38px;
 	}
 
 	@media #{$desktop-only} {
 		font-size: 16px;
 		line-height: 20px;
-		padding: 20px 39px 20px 39px;
-		margin-bottom: 41px;
+		padding: 10px 38px 10px 38px;
 	}
 }
