@@ -23,6 +23,9 @@
 		@media #{$not-mobile} {
 			width: 80px;
 			height: 83px;
+			margin-inline: auto;
+			margin-top: 56px;
+			margin-bottom: 46px;
 		}
 	}
 }
