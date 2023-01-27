@@ -66,42 +66,7 @@
 }
 
 .address__map {
-	--map-width: 100%;
-	--map-height: 362px;
-	display: grid;
-
-	@media #{$not-mobile} {
-		--map-height: 400px;
-	}
-
 	@media #{$desktop-only} {
 		grid-area: 1 / 1 / 2 / 2;
 	}
-}
-
-.address__map-live {
-	grid-area: 1 / 1 / 2 / 2;
-	border: none;
-	display: block;
-	width: var(--map-width);
-	min-height: var(--map-height);
-}
-
-.address__map-wrapper {
-	@media #{$not-desktop} {
-		display: contents;
-	}
-
-	@media #{$desktop-only} {
-		grid-area: 1 / 1 / 2 / 2;
-	}
-}
-
-.address__map-static {
-	grid-area: 1 / 1 / 2 / 2;
-	display: block;
-	object-fit: contain;
-	object-position: center;
-	width: var(--map-width);
-	min-height: var(--map-height);
 }
