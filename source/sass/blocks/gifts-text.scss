@@ -20,7 +20,16 @@
 			margin-inline: auto;
 		}
 
-		@media #{$not-mobile} {
+		@media #{$tablet-only} {
+			width: 80px;
+			height: 83px;
+			margin-inline: auto;
+			margin-top: 57px;
+			margin-bottom: 60px;
+			margin-left: 77px;
+		}
+
+		@media #{$desktop-only} {
 			width: 80px;
 			height: 83px;
 			margin-inline: auto;

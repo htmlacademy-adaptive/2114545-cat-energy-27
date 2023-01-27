@@ -15,14 +15,10 @@
 
 	@media #{$tablet-only} {
 		row-gap: 14px;
-		padding-left: 37px;
-		padding-right: 36px;
 	}
 
 	@media #{$desktop-only} {
 		row-gap: 16px;
-		padding-left: 40px;
-		padding-right: 36px;
 	}
 }
 
@@ -32,30 +28,13 @@
 	@media #{$tablet-only} {
 		font-size: 16px;
 		line-height: 16px;
-
-		&::after {
-			content: "";
-			position: absolute;
-			left: 0;
-			right: 0;
-			top: 20px;
-			height: 1px;
-			width: 200%;
-			background-color: #cdcdcd;
-		}
+		border-bottom: 1px solid #cdcdcd;
+		padding-bottom: 9px;
 	}
 
 	@media #{$desktop-only} {
-		&::after {
-			content: "";
-			position: absolute;
-			left: 0;
-			right: 0;
-			top: 20px;
-			height: 1px;
-			width: 200%;
-			background-color: #cdcdcd;
-		}
+		border-bottom: 1px solid #cdcdcd;
+		padding-bottom: 9px;
 	}
 }
 
@@ -66,5 +45,12 @@
 	@media #{$tablet-only} {
 		font-size: 16px;
 		line-height: 16px;
+		border-bottom: 1px solid #cdcdcd;
+		padding-bottom: 9px;
+	}
+
+	@media #{$desktop-only} {
+		border-bottom: 1px solid #cdcdcd;
+		padding-bottom: 9px;
 	}
 }

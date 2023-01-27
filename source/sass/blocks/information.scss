@@ -57,6 +57,10 @@
 	cursor: pointer;
 	outline: none;
 
+	&:hover {
+		border: 1px solid #bababa;
+	}
+
 	&:disabled {
 		opacity: 30%;
 	}
@@ -96,9 +100,14 @@
 	border: 1px solid #e7e7e7;
 	text-transform: uppercase;
 	outline: none;
+	resize: none;
 
 	&:hover {
 		border: 1px solid #cdcdcd;
+	}
+
+	&:focus {
+		border: 2px solid #444444;
 	}
 
 	&:invalid {
