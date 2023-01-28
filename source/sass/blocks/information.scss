@@ -101,6 +101,7 @@
 	text-transform: uppercase;
 	outline: none;
 	resize: none;
+	box-sizing: border-box;
 
 	&:hover {
 		border: 1px solid #cdcdcd;
@@ -118,7 +119,6 @@
 		font-size: 16px;
 		line-height: 18px;
 		padding-top: 14px;
-		padding-right: 146px;
 		padding-bottom: 13px;
 		padding-left: 20px;
 	}
@@ -127,7 +127,6 @@
 		font-size: 20px;
 		line-height: 30px;
 		padding-top: 11px;
-		padding-right: 472px;
 		padding-bottom: 11px;
 		padding-left: 20px;
 	}
@@ -136,7 +135,6 @@
 		font-size: 20px;
 		line-height: 30px;
 		padding-top: 11px;
-		padding-right: 412px;
 		padding-bottom: 11px;
 		padding-left: 20px;
 		box-sizing: border-box;
