@@ -12,15 +12,21 @@
 
 .contacts__title {
 	@media #{$mobile-only} {
+		font-size: 24px;
+		line-height: 26px;
 		padding-bottom: 35px;
 		position: relative;
 	}
 
 	@media #{$tablet-only} {
 		padding-bottom: 76px;
+		font-size: 36px;
+		line-height: 36px;
 	}
 
 	@media #{$desktop-only} {
+		font-size: 36px;
+		line-height: 36px;
 		margin-top: 69px;
 		padding-bottom: 76px;
 	}
