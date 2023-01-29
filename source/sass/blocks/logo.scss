@@ -20,6 +20,7 @@
 
 .logo__image {
 	display: block;
+	object-fit: cover;
 
 	@media #{$mobile-only} {
 		padding-top: 10px;
@@ -40,6 +41,7 @@
 	@media #{$desktop-only} {
 		width: 118px;
 		height: 22px;
+		padding-top: 9px;
 	}
 
 	&:hover {

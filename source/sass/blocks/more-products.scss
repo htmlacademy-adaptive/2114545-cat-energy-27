@@ -1,31 +1,25 @@
 .more-products {
+	--icon-size: 30px;
 	display: grid;
 	grid-template-columns: 1fr;
+
+	@media #{$not-mobile} {
+		--icon-size: 60px;
+		padding: 31px;
+		gap: 20px;
+	}
 
 	&::after {
 		content: "";
 		display: block;
 		order: -1;
 		margin: 20px auto;
+		width: var(--icon-size);
+		height: var(--icon-size);
 		background: #ffffff url("../../icons/stack.svg#plus") no-repeat center / contain;
 
-		@media #{$mobile-only} {
-			width: 30px;
-			height: 30px;
-			left: 0;
-		}
-
-		@media #{$tablet-only} {
-			width: 60px;
-			height: 60px;
-			margin-top: 52px;
-		}
-
-		@media #{$desktop-only} {
-			width: 60px;
-			height: 60px;
-			margin-top: 51px;
-		}
+		// @media #{$desktop-only} {
+		// }
 	}
 
 	@media #{$not-mobile} {
@@ -46,32 +40,43 @@
 	}
 }
 
-.more-products__show-text {
+.more-products__title {
 	text-transform: uppercase;
 	color: #111111;
 	font-family: var(--accent-font);
 	font-weight: 400;
+	font-size: 16px;
+	line-height: 20px;
+	margin-block: 4px 9px;
 
-	@media #{$mobile-only} {
-		font-size: 16px;
-		line-height: 20px;
-		margin-block: 4px 9px;
+	@media #{$not-mobile} {
+		font-size: 20px;
+		line-height: 22px;
+		margin-block: 8px 4px;
+		padding-inline: 40px;
+	}
+
+	@media #{$desktop-only} {
+		padding-inline: 0;
 	}
 }
 
 .more-products__text {
-	color: #444444;
+	padding-bottom: 21px;
 	font-family: var(--main-font);
+	font-size: 12px;
+	line-height: 16px;
+	color: #444444;
 
-	@media #{$mobile-only} {
-		font-size: 12px;
-		line-height: 16px;
-		margin: 0;
-		padding-bottom: 21px;
+	@media #{$not-mobile} {
+		padding-block: 0;
+		padding-inline: 40px;
+		font-size: 16px;
+		line-height: 18px;
 	}
 
-	@media #{$tablet-only} {
-		padding-bottom: 71px;
+	@media #{$desktop-only} {
+		padding-inline: 0;
 	}
 }
 

@@ -1,93 +1,96 @@
 .additional-goods {
-	display: grid;
-	gap: 19px;
 	margin-bottom: 34px;
 
 	@media #{$tablet-only} {
-		grid-template-columns: 1fr 1fr;
-		margin-bottom: 59px;
+		margin-bottom: 54px;
 	}
 
 	@media #{$desktop-only} {
-		grid-template-columns: 1fr 1fr 1fr 1fr;
 		margin-bottom: 61px;
 	}
 }
 
-.additional-goods__title {
-	@media #{$mobile-only} {
-		padding-bottom: 34px;
-		font-size: 24px;
-		line-height: 26px;
-	}
+.additional-goods__wrapper {
+	display: grid;
+	grid-template-columns: repeat(var(--column-count, 1), 1fr);
+	gap: 12px;
+	font-size: 16px;
+	line-height: 24px;
 
 	@media #{$not-mobile} {
-		padding-bottom: 57px;
+		--column-count: 2;
+		gap: 32px 60px;
+		font-size: 20px;
+		line-height: 30px;
+	}
+
+	@media #{$desktop-only} {
+		--column-count: 4;
+		column-gap: 80px;
+	}
+}
+
+.additional-goods__title {
+	margin-bottom: 34px;
+	font-size: 24px;
+	line-height: 26px;
+
+	@media #{$not-mobile} {
+		margin-bottom: 57px;
 		font-size: 36px;
 		line-height: 36px;
 	}
 }
 
 .additional-goods__label {
+	display: grid;
+	grid-template-columns: 30px 1fr;
+	align-items: center;
+	column-gap: 15px;
+	color: #222222;
 	text-transform: uppercase;
 
-	@media #{$mobile-only} {
-		font-size: 16px;
-		line-height: 18px;
-		display: grid;
-		grid-template-columns: 30px 1fr;
-		column-gap: 16px;
-	}
-
 	@media #{$not-mobile} {
-		font-size: 20px;
-		line-height: 30px;
-		display: grid;
-		grid-template-columns: 40px 1fr;
-		column-gap: 20px;
+		display: flex;
+		gap: 20px;
+		align-items: center;
 	}
 }
 
 .additional-goods__input {
-	font-family: inherit;
-	margin: 0;
+	--input-size: 30px;
 	appearance: none;
+	position: relative;
+	box-sizing: border-box;
+	margin: 0;
+	width: var(--input-size);
+	height: var(--input-size);
+	border-radius: 0;
 	border: 1px solid #cdcdcd;
-	cursor: pointer;
+	outline-offset: 1px;
+	background: var(--tick-icon) no-repeat center / var(--input-size);
+
+	@media #{$not-mobile} {
+		--input-size: 40px;
+	}
+
+	&:focus-visible {
+		outline: 2px solid #444444;
+	}
 
 	&:hover {
 		border: 1px solid #bababa;
 	}
 
+	&:active {
+		opacity: 0.6;
+	}
+
 	&:disabled {
-		opacity: 30%;
+		opacity: 0.3;
 	}
 
-	&:disabled:hover {
-		opacity: 30%;
-		cursor: default;
+	&:checked {
+		--tick-icon: url("../../icons/stack.svg#tick-checkbox");
 	}
-
-	@media #{$mobile-only} {
-		width: 30px;
-		height: 30px;
-		border-radius: 0;
-	}
-
-	@media #{$not-mobile} {
-		width: 40px;
-		height: 40px;
-		border-radius: 0;
-	}
-}
-
-.additional-goods__input[type="checkbox"]:checked::before {
-	content: "";
-	display: block;
-	height: 100%;
-	width: 100%;
-	background-image: url("../../icons/stack.svg#tick-checkbox");
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: cover;
 }

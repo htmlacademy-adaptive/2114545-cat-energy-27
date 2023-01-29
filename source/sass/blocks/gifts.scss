@@ -1,22 +1,60 @@
 .gifts {
+	z-index: 5;
+	display: grid;
+	gap: 48px;
+	padding: 59px 59px 43px;
 	color: #ffffff;
-	position: relative;
+	background:
+		linear-gradient(
+			rgb(104 183 56 / 0.85),
+			rgb(104 183 56 / 0.85)
+		),
+		var(--bg-image) no-repeat var(--cat-position, center) / cover;
+	background-color: #868686;
+
+	@media #{$tablet-only} {
+		grid-template-columns: min-content 165px;
+		justify-content: space-between;
+		padding-block: 56px;
+		padding-inline: 77px 120px;
+	}
+
+	@media #{$desktop-only} {
+		gap: 44px;
+		padding-inline: 40px;
+	}
 
 	@include bg-image("giftcat");
 
 	&::before {
 		content: "";
-		position: absolute;
-		left: 0;
-		right: 0;
-		height: 100%;
-		background:
-			linear-gradient(
-				rgb(104 183 56 / 0.85),
-				rgb(104 183 56 / 0.85)
-			),
-			var(--bg-image) no-repeat var(--cat-position, center) / contain;
-		z-index: -1;
-		background-color: #868686;
+		display: block;
+		width: 78px;
+		height: 80px;
+		margin-inline: auto;
+		background: url("../../icons/stack.svg#gift") no-repeat center / cover;
+
+		@media #{$tablet-only} {
+			width: 80px;
+			height: 83px;
+		}
+
+		@media #{$desktop-only} {
+			width: 80px;
+			height: 83px;
+			transform: translate(2px, -3px);
+		}
+	}
+}
+
+.gifts__text {
+	font-size: 16px;
+	line-height: 20px;
+	font-family: var(--main-font);
+	text-align: center;
+
+	@media #{$tablet-only} {
+		text-align: start;
+		padding-block: 14px;
 	}
 }

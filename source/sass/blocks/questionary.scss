@@ -1,7 +1,11 @@
 .questionary {
-	background-color: #ffffff;
+	// background-color: #ffffff;
 	color: #000000;
 	font-family: var(--accent-font);
+
+	@media #{$tablet-only} {
+		padding-inline: 40px;
+	}
 }
 
 .questionary__title {
@@ -19,18 +23,19 @@
 }
 
 .questionary__text {
-	text-transform: uppercase;
+	margin-block: 38px;
 	font-weight: 400;
-
-	@media #{$mobile-only} {
-		font-size: 14px;
-		line-height: 18px;
-		padding-bottom: 25px;
-	}
+	line-height: 18px;
+	font-size: 14px;
+	text-transform: uppercase;
 
 	@media #{$not-mobile} {
+		margin-block: 32px;
 		font-size: 20px;
 		line-height: 30px;
-		padding-bottom: 46px;
+	}
+
+	@media #{$desktop-only} {
+		padding-top: 20px;
 	}
 }

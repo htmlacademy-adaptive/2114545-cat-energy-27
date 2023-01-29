@@ -12,6 +12,10 @@
 		padding-block: 25px;
 	}
 
+	@media #{$tablet-only} {
+		margin-top: -24px;
+	}
+
 	@media #{$desktop-only} {
 		grid-template-columns: 1fr 1fr;
 		padding-block: 53px;

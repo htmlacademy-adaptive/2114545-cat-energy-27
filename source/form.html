@@ -4,17 +4,16 @@
 
 {% block main %}
 <main>
-	<section class="questionary">
-		<div class="page__centerer">
+	<section class="questionary page__centerer">
+		<div class="">
 			<h1 class="questionary__title heading heading--lvl_1 ">Подбор программы</h1>
-			<p class="questionary__text">Заполните анкету, и мы подберем
-				программу питания для вашего кота</p>
+			<p class="questionary__text">Заполните анкету, и мы подберем<br> программу питания для вашего кота</p>
 		</div>
 
 		<form class="questionary__form form" action="https://echo.htmlacademy.ru/" method="post">
 
-			<fieldset class="form__group-information information page__centerer">
-				<legend class="visually-hidden">Данные кота</legend>
+			<div class="form__group-information information" role="group" aria-describedby="cat-data">
+				<div class="visually-hidden" id="cat-data">Данные кота</div>
 
 				<div class="information__wrapper">
 
@@ -22,12 +21,12 @@
 
 						<div class="information__field-wrapper">
 							<label class="information__label" for="name">Имя:<span aria-hidden="true">*</span></label>
-							<input class="information__input information__input--error" type="text" id="name" placeholder="Укажите кличку" value="Барсик" name="cat-name" required>
+							<input class="information__input" type="text" id="name" placeholder="Укажите кличку" value="Барсик" name="cat-name" required>
 						</div>
 
 						<div class="information__field-wrapper">
 							<label class="information__label" for="weight">Вес (кг):<span aria-hidden="true">*</span></label>
-							<input class="information__input information__input--error" type="text" id="weight" placeholder="Укажите вес" value="7" name="cat-weight" required>
+							<input class="information__input" type="text" id="weight" placeholder="Укажите вес" value="7" name="cat-weight" required>
 						</div>
 
 						<div class="information__field-wrapper">
@@ -53,52 +52,62 @@
 					</div>
 
 				</div>
-			</fieldset>
+			</div>
 
-			<fieldset class="form__group-contacts contacts page__centerer">
-				<legend class="contacts__title heading heading--decoration_lines">Контактные данные (владельца кота)</legend>
+			<div class="form__group-contacts contacts" role="group" aria-describedby="cat-contacts">
+				<div class="contacts__title heading" id="cat-contacts">
+					<span class="heading__decorated">Контактные данные (владельца кота)</span>
+				</div>
 				<div class="contacts__wrapper">
 
 					<div class="contacts__label-wrapper">
 						<label class="contacts__label" for="email">E-mail:<span aria-hidden="true">*</span></label>
-						<input class="contacts__input contacts__input--email contacts__input--error" placeholder="kuklachev@gmail.com" type="email" id="email" name="email" required>
+						<input class="contacts__input contacts__input--email" placeholder="kuklachev@gmail.com" type="email" id="email" name="email" required>
+						<span class="contacts__icon"></span>
 					</div>
 
 					<div class="contacts__label-wrapper">
 						<label class="contacts__label" for="phone">Телефон:<span aria-hidden="true">*</span></label>
-						<input class="contacts__input contacts__input--phone contacts__input--error" placeholder="8 (960) 900-60-90" type="tel" id="phone" name="phone" required>
+						<input class="contacts__input contacts__input--phone" placeholder="8 (960) 900-60-90" type="tel" id="phone" name="phone" required>
+						<span class="contacts__icon"></span>
 					</div>
 
 				</div>
-			</fieldset>
+			</div>
 
-			<div class="questionary__comments comments page__centerer">
-				<label class="comments__label heading heading--decoration_lines" for="comments">Комментарий</label>
+			<div class="questionary__comments comments">
+				<label class="comments__label heading heading heading--lvl_2" for="comments">
+					<span class="heading__decorated">Комментарий</span>
+				</label>
 				<textarea class="comments__text" id="comments" placeholder="Расскажите обо всех повадках кота" name="comments"></textarea>
 			</div>
 
-			<fieldset class="form__group-additional-goods additional-goods page__centerer">
-				<legend class="additional-goods__title heading heading--lvl_2 heading--decoration_lines">Дополнительно</legend>
+			<div class="form__group-additional-goods additional-goods" role="group" aria-describedby="additional-goods">
+				<div class="additional-goods__title heading heading--lvl_2" id="additional-goods">
+					<span class="heading__decorated">Дополнительно</span>
+				</div>
 
-				<label class="additional-goods__label">
-					<input class="additional-goods__input" type="checkbox" name="type-of-additional-goods" value="sweetener" checked>
-					Сахарозаменитель
-				</label>
-				<label class="additional-goods__label">
-					<input class="additional-goods__input" type="checkbox" name="type-of-additional-goods" value="water">
-					Питьевая вода
-				</label>
-				<label class="additional-goods__label">
-					<input class="additional-goods__input" type="checkbox" name="type-of-additional-goods" value="milk">
-					Молоко
-				</label>
-				<label class="additional-goods__label">
-					<input class="additional-goods__input" type="checkbox" name="type-of-additional-goods" value="vitamins">
-					Витамины
-				</label>
+				<div class="additional-goods__wrapper">
+					<label class="additional-goods__label">
+						<input class="additional-goods__input" type="checkbox" name="type-of-additional-goods" value="sweetener" checked>
+						Сахарозаменитель
+					</label>
+					<label class="additional-goods__label">
+						<input class="additional-goods__input" type="checkbox" name="type-of-additional-goods" value="water">
+						Питьевая вода
+					</label>
+					<label class="additional-goods__label">
+						<input class="additional-goods__input" type="checkbox" name="type-of-additional-goods" value="milk">
+						Молоко
+					</label>
+					<label class="additional-goods__label">
+						<input class="additional-goods__input" type="checkbox" name="type-of-additional-goods" value="vitamins">
+						Витамины
+					</label>
+				</div>
 
-			</fieldset>
-			<div class="form__button-wrapper page__centerer">
+			</div>
+			<div class="form__button-wrapper">
 				<button class="form__button" type="submit">Отправить заявку</button>
 				<span class="form__required-fields" aria-hidden="true">* — Обязательные поля</span>
 			</div>

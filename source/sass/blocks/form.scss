@@ -1,9 +1,19 @@
+.form {
+	font-family: var(--accent-font);
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 24px;
+
+	@media #{$not-mobile} {
+		padding-block-start: 34px;
+		font-size: 20px;
+		line-height: 30px;
+	}
+}
+
 .form__group-information {
 	padding: 0;
 	border: none;
-	text-transform: uppercase;
-	font-size: 16px;
-	line-height: 18px;
 }
 
 .form__group-contacts {
@@ -17,81 +27,69 @@
 }
 
 .form__button-wrapper {
-	display: flex;
-	flex-direction: column;
+	display: grid;
+	grid-template-columns: repeat(var(--column-count, 1), 1fr);
 	margin-bottom: 32px;
+	gap: 21px;
 
-	@media #{$tablet-only} {
-		flex-direction: row;
+	@media #{$not-mobile} {
+		--column-count: 2;
+		gap: 32px 62px;
+		font-size: 20px;
+		line-height: 30px;
 		margin-bottom: 72px;
-		justify-content: center;
 	}
 
 	@media #{$desktop-only} {
-		flex-direction: row;
+		column-gap: 80px;
 		margin-bottom: 82px;
 	}
 }
 
 .form__button {
 	display: block;
-	text-align: center;
+	padding: 10px 20px;
+	border: none;
 	font-family: var(--accent-font);
 	font-weight: 400;
 	font-size: 16px;
 	line-height: 20px;
-	background-color: #68b738;
+	text-align: center;
 	text-decoration: none;
 	text-transform: uppercase;
 	color: #ffffff;
-	border: none;
-	padding: 7px 44px 7px 44px;
+	background-color: #68b738;
+	outline-offset: -1px;
 
 	&:hover {
-		background-color: #5eaa2f;
+		background: #5eaa2f;
 	}
 
 	&:active {
-		background-color: #5eaa2f;
 		color: rgba(255 255 255 / 0.3);
 	}
 
-	&:disabled:hover {
-		cursor: default;
+	&:disabled {
+		opacity: 0.3;
 	}
 
-	@media #{$tablet-only} {
+	@media #{$not-mobile} {
 		font-size: 20px;
-		padding: 13px 45px 13px 45px;
-	}
-
-	@media #{$desktop-only} {
-		font-size: 20px;
-		padding: 13px 188px 13px 188px;
+		line-height: 30px;
+		padding: 11px 22px;
 	}
 }
 
 .form__required-fields {
-	text-align: center;
 	font-family: var(--main-font);
+	font-size: 14px;
+	line-height: 16px;
+	text-align: center;
 
-	@media #{$mobile-only} {
-		padding-top: 21px;
-		font-size: 14px;
-		line-height: 16px;
-	}
-
-	@media #{$tablet-only} {
-		padding-left: 64px;
+	@media #{$not-mobile} {
+		align-self: center;
 		font-size: 16px;
 		line-height: 16px;
-		align-self: center;
-	}
-
-	@media #{$desktop-only} {
-		padding-left: 84px;
-		font-size: 16px;
-		line-height: 16px;
-		align-self: center;
+		text-align: start;
 	}
 }

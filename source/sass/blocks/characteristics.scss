@@ -1,24 +1,29 @@
 .characteristics {
 	align-self: center;
+
+	@media #{$tablet-only} {
+		justify-self: end;
+	}
 }
 
 .characteristics__list {
+	margin: 0;
+	display: grid;
 	color: #444444;
 	font-family: var(--main-font);
 
 	@media #{$mobile-only} {
 		font-size: 14px;
 		line-height: 14px;
-		margin: 0;
 		padding-bottom: 15px;
-		display: grid;
 		grid-template-columns: 1fr 1fr;
 	}
 
 	@media #{$tablet-only} {
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-between;
+		grid-template-columns: 1fr 73px;
+		gap: 20px;
+		padding-block: 3px;
+		text-align: end;
 	}
 
 	@media #{$not-mobile} {
@@ -30,10 +35,16 @@
 		display: grid;
 		grid-template-columns: 224px 61px;
 		gap: 20px;
+		padding-top: 6px;
 	}
 }
 
 
 .characteristics__price {
 	margin-inline-start: 0;
+	text-align: end;
+
+	@media #{$desktop-only} {
+		text-align: start;
+	}
 }
