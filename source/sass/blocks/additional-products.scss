@@ -34,7 +34,7 @@
 
 	@media #{$not-mobile} {
 		row-gap: 67px;
-		padding-block: 52px 48px;
+		padding-block: 54px 48px;
 	}
 
 	@media #{$desktop-only} {
@@ -89,6 +89,10 @@
 		border: 1px solid #cdcdcd;
 		padding: 25px 37px 28px;
 		margin-bottom: -1px;
+	}
+
+	@media #{$tablet-only} {
+		gap: 19px;
 	}
 
 	@media #{$desktop-only} {
