@@ -17,9 +17,6 @@
 		width: var(--icon-size);
 		height: var(--icon-size);
 		background: #ffffff url("../../icons/stack.svg#plus") no-repeat center / contain;
-
-		// @media #{$desktop-only} {
-		// }
 	}
 
 	@media #{$not-mobile} {
@@ -95,12 +92,11 @@
 
 	&:active {
 		background-color: #ebebeb;
-		color: #444444;
-		opacity: 30%;
+		color: rgb(68 68 68 / 0.3);
 	}
 
 	&:disabled:hover {
-		cursor: default;
+		opacity: 0.3;
 	}
 
 	@media #{$mobile-only} {
