@@ -23,6 +23,7 @@
 	&::before {
 		content: "";
 		position: absolute;
+		top: 0;
 		left: 0;
 		right: 0;
 		height: 302px;
@@ -37,11 +38,8 @@
 				#54555a 50%,
 				#434248 50%
 			);
+		background-color: #434247;
 		z-index: -1;
-
-		@media #{$mobile-only} {
-			background-color: #434247;
-		}
 
 		@media #{$tablet-only} {
 			content: none;
@@ -49,11 +47,7 @@
 
 		@media #{$desktop-only} {
 			height: 694px;
-			top: 0;
 			left: 50%;
-			right: 0;
-			z-index: -1;
-			background-color: #434247;
 		}
 	}
 }
