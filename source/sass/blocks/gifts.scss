@@ -21,7 +21,7 @@
 
 	@media #{$desktop-only} {
 		gap: 44px;
-		padding-inline: 40px;
+		padding-inline: 32px;
 	}
 
 	@include bg-image("giftcat");

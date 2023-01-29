@@ -36,7 +36,7 @@
 .map__image {
 	grid-area: 1 / 1 / 2 / 2;
 	display: block;
-	object-fit: contain;
+	object-fit: cover;
 	object-position: center;
 	width: var(--map-width);
 	min-height: var(--map-height);
