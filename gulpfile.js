@@ -165,17 +165,13 @@ export function compileProject (done) {
 	)(done);
 }
 
-// Production
-
-export function build (done) {
+export function buildProd (done) {
 	data.isDevelopment = false;
 	series(
 		removeBuild,
 		compileProject
 	)(done);
 }
-
-// Development
 
 export function runDev (done) {
 	series(
